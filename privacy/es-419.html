@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es-419">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad de Guiguzi (Español)</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">鬼谷子 · Guiguzi</a>
+<nav class="site-nav">
+<a href="../privacy/es-419.html">Política de Privacidad</a>
+<a href="../delete-account/es-419.html">Eliminación de cuenta y datos</a>
+<a href="../index.html">Inicio</a>
+</nav>
+</header>
+<main>
+<nav class="langs">Idiomas：<a href="zh-Hans.html">简体中文</a><a href="zh-Hant.html">繁體中文</a><a href="en.html">English</a><a href="es-419.html" aria-current="page">Español (Latinoamérica)</a></nav>
+<article>
+<h1>Política de Privacidad de Guiguzi — borrador</h1>
+<blockquote>
+<p>Borrador de revisión interna, 2026-10-25. No está listo para publicarse. Las disposiciones sobre el dispositivo solo aplican si la función de cupo por dispositivo revisada se incluye en la versión publicada. Resuelve los puntos pendientes según esa versión antes de publicar.</p>
+</blockquote>
+<p><strong>Fecha de entrada en vigor:</strong> Pendiente de publicación</p>
+<p><strong>Operador / responsable del tratamiento:</strong> Entidad legal pendiente</p>
+<p><strong>Correo de contacto:</strong> [联系邮箱待提供]</p>
+<h2>1. Alcance y responsable</h2>
+<p>Guiguzi te ayuda a revisar texto de conversaciones que decides proporcionar. Esta política explica el procesamiento local, el análisis en línea, las suscripciones y tus opciones. Antes del lanzamiento deben indicarse arriba el responsable y un contacto que funcione.</p>
+<p>El destino del despliegue de prueba es un servidor InstaBox en Estados Unidos, con análisis real v9 mediante Alibaba Cloud Bailian en Pekín. Las compras y la restauración de suscripciones están deshabilitadas durante la prueba. El inicio de sesión de release aún no está integrado: poder compilar el paquete no demuestra un servicio completo funcional. La simulación sigue reservada al desarrollo local. Este trabajo no acredita un despliegue real, cuentas de producción ni pagos validados.</p>
+<h2>2. Información procesada en tu dispositivo</h2>
+<p>Las capturas y los audios importados se procesan en tu dispositivo para reconocer o transcribir texto. La solicitud de análisis contiene texto, no la imagen ni el audio original. Puedes revisar y ocultar información antes de enviarla; hacerlo no garantiza que se eliminen todos los datos que permiten identificar a alguien. Si falla la limpieza, pueden quedar copias temporales. Nuestra limpieza no elimina los originales de tu galería u otras aplicaciones.</p>
+<p>Guardar un análisis es una acción manual. Los registros guardados contienen el texto confirmado, resultado, identificador, fecha, versión de formato e idioma de la interfaz, cifrados en este dispositivo. Se configuraron exclusiones de copias de seguridad y migración, pero falta verificarlas en la versión final. Limpiar la conversación actual no borra los registros guardados. Eliminar la app normalmente elimina sus archivos locales; la opción de iOS para desinstalar conservando datos los mantiene. Las respuestas copiadas quedan en el portapapeles del sistema, fuera de nuestros controles de eliminación.</p>
+<h2>3. Texto en línea e información de cuenta</h2>
+<p>Cuando aceptas el aviso y solicitas un análisis, el texto confirmado y la información de ruta seleccionada se envían a nuestro servidor configurado, junto con una credencial de sesión, la versión del consentimiento y un identificador de solicitud. El servidor crea un identificador de cuenta aleatorio. El código revisado no obtiene correo, teléfono ni identidad de inicio de sesión de Apple o Google mediante un servicio de acceso operativo. El contexto del análisis incluye los idiomas seleccionados y los roles anónimos de los hablantes; no envía al modelo el identificador de cuenta, la credencial de sesión ni el identificador del dispositivo.</p>
+<p>El servidor usa el texto para generar un resultado y conserva contadores y un resumen criptográfico de cada solicitud completada para evitar descuentos duplicados del cupo. Un resumen asociado a una cuenta no es información anónima. El texto no se guarda automáticamente como historial de análisis en el servidor, pero una operación inconclusa puede retenerlo después de agotar el tiempo de espera. Antes del lanzamiento en línea deben confirmarse el procesamiento, la conservación y cualquier uso para entrenar modelos.</p>
+<h2>4. Identificador del dispositivo — función condicional</h2>
+<p>Si se incluye el cupo por dispositivo, la app obtiene un resumen mediante una función criptográfica de un solo sentido: parte de un identificador aleatorio en el llavero de iOS, o del identificador del sistema Android combinado con un espacio de nombres de la app. El identificador Android original no se envía al servidor. El resumen solo llega a nuestro servidor, no a RevenueCat ni al modelo de análisis. Sirve para evitar que se otorgue repetidamente el cupo gratuito y limitar intentos adicionales cuando se agota un cupo. Es un identificador de dispositivo, no una prueba de identidad ni información anónima.</p>
+<p>El resumen puede mantenerse tras reinstalar la app, pero puede cambiar con el sistema, un restablecimiento u otras condiciones. Borrar una cuenta o retirar el consentimiento de análisis no elimina los registros independientes del cupo y los intentos del dispositivo. La implementación revisada no tiene vencimiento automático para ellos. <strong>Pendiente antes del lanzamiento: un plazo concreto de conservación, un procedimiento de eliminación y la justificación de la excepción.</strong></p>
+<h2>5. Compras y RevenueCat</h2>
+<p>Cuando se habilitan suscripciones reales y entras al proceso de compra o restauración, RevenueCat procesa nuestro identificador de cuenta, productos, recibos o tokens de compra de la tienda, estado de suscripción e información operativa del dispositivo y la app. Se usa para validar compras, habilitar funciones pagadas, prevenir fraude y analizar compras. Nuestra integración desactiva la recopilación automática de identificadores publicitarios o de dispositivo y los diagnósticos del SDK; esto no elimina los metadatos normales de conexión. Nuestro código no le entrega conversaciones, imágenes, audio ni credenciales de eliminación de cuenta.</p>
+<p>La documentación de clientes de RevenueCat describe el país de la transacción o un país inferido por IP y las conexiones recientes. Antes de declarar los datos deben confirmarse este tratamiento y los ajustes del proyecto. Apple o Google procesa los datos de pago en su tienda; nuestra app no tiene un formulario para números de tarjeta. Borrar tu cuenta no cancela una suscripción ni elimina los registros de la tienda; administra la renovación en los ajustes de suscripciones de esa tienda.</p>
+<h2>6. Plazos de conservación</h2>
+<table>
+<thead>
+<tr>
+<th>Información</th>
+<th>Conservación revisada y condiciones de lanzamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texto no guardado, capturas y copias de audio</td>
+<td>Durante el proceso actual; se intenta limpiar en los pasos correspondientes de limpieza, eliminación e inicio. Una falla o análisis inconcluso puede dejar datos temporales; no se garantiza el borrado inmediato.</td>
+</tr>
+<tr>
+<td>Análisis guardados y modelos de voz descargados</td>
+<td>Los análisis permanecen hasta eliminarlos. Los modelos válidos permanecen hasta borrarlos en su configuración o junto con los archivos de la app; borrar la cuenta normalmente no los elimina.</td>
+</tr>
+<tr>
+<td>Sesiones, uso y resúmenes de solicitudes</td>
+<td>El acceso de sesión vence por defecto a las 24 horas, pero los registros no vencen automáticamente; borrar la cuenta o reiniciar el servidor elimina los registros revisados en memoria. Debe definirse el plazo de producción.</td>
+</tr>
+<tr>
+<td>Credenciales locales de eliminación y solicitudes pendientes</td>
+<td>Se guardan cifradas hasta la confirmación y la limpieza local exitosa, sin vencimiento automático fijo. Para reintentar, la app debe volver a ejecutarse con conexión.</td>
+</tr>
+<tr>
+<td>Comprobante mínimo de consentimiento tras borrar la cuenta</td>
+<td>Resumen del token de sesión, versión del aviso, decisión, fecha de decisión y versión de app; vence 365 días después de la última decisión de aceptación o rechazo, no del borrado de cuenta. El prototipo limpia al iniciar y normalmente cada hora; reiniciarlo puede eliminarlo antes.</td>
+</tr>
+<tr>
+<td>Registro de confirmación de eliminación</td>
+<td>El comprobante de eliminación confirmada se conserva sin fecha de vencimiento: solo el resumen de la credencial de eliminación, la fecha de la primera confirmación y el hecho de que se confirmó la eliminación. No incluye identificador de cuenta, resumen del token de sesión, vínculo con el dispositivo ni contenido. Así, un dispositivo que conserve una credencial sin vencimiento puede confirmar la eliminación años después. La marca local en memoria y el comprobante exclusivo de desarrollo para un proveedor no configurado siguen venciendo a los 365 días; ninguno prueba la eliminación en el proveedor.</td>
+</tr>
+<tr>
+<td>Registros del dispositivo y cupos diarios, si se habilitan</td>
+<td>El uso gratuito y los intentos de seguridad sobreviven al borrado de cuenta y no tienen vencimiento implementado. Los registros diarios pagados se eliminan al completar el borrado de cuenta, pero las filas anteriores no vencen por sí solas. El plazo y la eliminación confiable tras reinicios siguen pendientes.</td>
+</tr>
+<tr>
+<td>Registros técnicos y datos de terceros</td>
+<td>Deben confirmarse los plazos de la app, servidor, sistema operativo, RevenueCat, tiendas, servidor de descargas y futuro modelo. No les aplica una promesa universal de 365 días o eliminación inmediata.</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Eliminación y retiro del consentimiento</h2>
+<p>Puedes limpiar la conversación actual, borrar análisis guardados, quitar modelos de voz desde sus ajustes o solicitar eliminar tu cuenta en la app. Cada acción tiene un alcance distinto. Al borrar la cuenta se intenta limpiar el dispositivo y eliminar los datos del servidor; si no hay conexión o falla, la solicitud puede quedar pendiente y reintentarse al iniciar la app o volver al primer plano. Que el servidor no encuentre una cuenta no prueba que haya eliminado datos de terceros. Algunas fallas al limpiar credenciales locales también requieren reintento.</p>
+<p>Puedes rechazar futuros análisis. En la app revisada, el rechazo solo cambia el estado local; el servidor puede registrar el retiro del consentimiento, pero la app todavía no envía esa notificación. Retirar el consentimiento no garantiza cancelar una solicitud ya en curso ni elimina automáticamente análisis guardados, cupos o transacciones. <strong>Pendiente antes de publicar: una página pública de eliminación de cuenta que funcione, un canal de contacto y plazos verificables.</strong> Las excepciones legales deben explicarse y limitarse; no se puede omitir la conservación del dispositivo mientras se promete borrar todo.</p>
+<h2>8. Proveedores y procesamiento internacional</h2>
+<p>RevenueCat presta el servicio de suscripciones. Apple y Google operan sus tiendas. Hugging Face y su red distribuyen actualmente los modelos de voz descargables; reciben información de conexión, como IP, pero nuestra solicitud de descarga no contiene tus conversaciones ni audio. Falta definir el servidor de descargas de producción. El procesamiento local con Vision, ML Kit y Whisper es distinto del análisis en línea de conversaciones.</p>
+<p>La ruta de datos de la prueba es <strong>teléfono → servidor InstaBox en Estados Unidos → Alibaba Cloud Bailian en Pekín, China</strong>, con HTTPS en las conexiones remotas. Las credenciales de sesión, registros de consentimiento y resúmenes del dispositivo llegan al servidor estadounidense; solo el texto confirmado y el contexto del análisis continúan a Pekín, sin las credenciales ni el resumen del dispositivo. Esto implica procesamiento internacional en Estados Unidos y China. El alojamiento, los registros de conexión y la conservación de InstaBox requieren verificación aparte.</p>
+<p><strong>Solo para pruebas internas; revisar antes de la publicación oficial en tiendas.</strong> El proveedor del análisis en línea es <strong>Alibaba Cloud Bailian (阿里云百炼)</strong>, en la región de procesamiento de <strong>Pekín (Beijing)</strong>. Para usuarios fuera de China, el texto confirmado y el contexto del análisis se transfieren internacionalmente a <strong>China</strong> para su procesamiento. Qwen genera la respuesta y GLM realiza la revisión semántica previa. Los contratos, subencargados, garantías de transferencia, conservación, eliminación y restricciones de entrenamiento siguen pendientes de verificación antes del lanzamiento; este borrador no promete conservación cero ni ausencia de entrenamiento. Los términos y lugares de procesamiento de RevenueCat requieren verificación aparte.</p>
+<h2>9. Seguridad, registros y seguimiento</h2>
+<p>Los análisis guardados y las credenciales de eliminación usan cifrado local. Los registros de solicitudes del servidor se limitan a ruta, estado, tamaño de respuesta, duración y un código fijo de error cuando corresponde; el registrador revisado omite conversaciones, credenciales de cuenta/sesión e IP. Algunos componentes nativos generan registros locales de funcionamiento con idioma e información de archivos. Los registros del alojamiento y la red, y el comportamiento del SDK, necesitan verificación aparte. No podemos afirmar que no haya registros o que todas las conexiones de desarrollo estén cifradas.</p>
+<p>No se encontró en el código revisado una integración de publicidad, intermediarios de datos o seguimiento publicitario entre apps. Eso no significa que los proveedores no reciban información técnica. <strong>Pendiente antes del lanzamiento: HTTPS en todas las rutas remotas, controles de acceso de producción, protección de bases de datos y respaldos, y pruebas de conservación y eliminación.</strong></p>
+<h2>10. Tus derechos y fundamentos del tratamiento</h2>
+<p>Según la ley aplicable, puedes solicitar acceso, corrección, eliminación, portabilidad o restricción, oponerte al tratamiento y reclamar ante una autoridad de protección de datos. Utiliza el contacto de arriba cuando esté disponible. Las solicitudes pueden requerir verificar identidad y considerar excepciones legales explicadas; este borrador no implica que ya exista un canal operativo.</p>
+<p>El aviso de tratamiento regula tu decisión de enviar texto. El procesamiento de suscripciones presta el servicio que solicitas. La prevención de fraude y el control del cupo pueden basarse en intereses legítimos donde se permita, solo después de evaluar necesidad y equilibrio de derechos. Este borrador no acredita esa evaluación ni una exención de las reglas de acceso al dispositivo. Deben confirmarse las bases legales y las garantías sobre información sensible para cada mercado de lanzamiento.</p>
+<h2>11. Solo para personas adultas</h2>
+<p>El servicio está dirigido a personas de 18 años o más. No envíes material que no tengas derecho a proporcionar y elimina datos innecesarios de otras personas, especialmente menores. El código revisado no verifica la edad; esta política no acredita un control de edad implementado.</p>
+<h3>Beta sin inicio de sesión</h3>
+<p>El servidor beta asigna un identificador de instalación anónimo sin recopilar correo ni identidades de otros servicios. Es un identificador seudónimo vinculable, no un dato completamente anónimo. Las sesiones solo viven en memoria y se vuelven a emitir después de reiniciar. Las credenciales de eliminación se cifran localmente; el registro SQLite existente del servidor solo guarda sus hashes y los identificadores necesarios para borrar la cuenta. Borrar la cuenta elimina el contenido local y revoca la identidad del servidor; sin conexión, se reintenta al abrir la app con conexión. Los registros de usos gratis del dispositivo se conservan según las reglas existentes y no se reinician al emitir otra identidad o borrar la cuenta. Si no está configurado el proveedor de pagos, se informa de ello sin afirmar que el proveedor confirmó la eliminación.</p>
+<h2>12. Cambios y contacto</h2>
+<p>Antes de publicar, ajustaremos esta política a la app final e indicaremos fecha de vigencia, responsable, contacto, página de eliminación y los datos pendientes de proveedores y conservación. Los cambios importantes del tratamiento deben reflejarse en el aviso y la política antes de comenzar ese nuevo tratamiento.</p>
+<p>La evidencia interna está en el inventario del código, los pendientes de lanzamiento y las fuentes oficiales, consultadas el 2026-10-25. Al publicar la política pública deben sustituirse o eliminarse estos enlaces internos y las instrucciones del borrador.</p>
+</article>
+</main>
+<footer class="site-footer">Esta es una página estática. No usa scripts ni analítica.<br>联系邮箱：[联系邮箱待提供]</footer>
+</body>
+</html>

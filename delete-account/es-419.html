@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es-419">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliminación de cuenta y datos (Guiguzi)</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">鬼谷子 · Guiguzi</a>
+<nav class="site-nav">
+<a href="../privacy/es-419.html">Política de Privacidad</a>
+<a href="../delete-account/es-419.html">Eliminación de cuenta y datos</a>
+<a href="../index.html">Inicio</a>
+</nav>
+</header>
+<main>
+<nav class="langs">Idiomas：<a href="zh-Hans.html">简体中文</a><a href="zh-Hant.html">繁體中文</a><a href="en.html">English</a><a href="es-419.html" aria-current="page">Español (Latinoamérica)</a></nav>
+<article>
+<h1>Eliminación de cuenta y datos</h1>
+
+<p>Esta página explica cómo Guiguzi trata la eliminación de cuenta y datos: cómo eliminar tu cuenta en la app, qué datos se borran y qué datos se conservan y durante cuánto tiempo. Se basa en el borrador de la Política de Privacidad de Guiguzi (2026-10-25). Los puntos marcados como 待补 (pendientes de completar) aún no están terminados y deben completarse antes del lanzamiento.</p>
+
+<h2>Eliminar tu cuenta en la app</h2>
+<ol>
+<li>Abre Guiguzi y toca Menú en la esquina superior derecha de la pantalla de inicio.</li>
+<li>Elige Guardados (el texto de la app también lo llama entrada de ajustes).</li>
+<li>Toca Eliminar cuenta al final de la página.</li>
+<li>Toca Continuar.</li>
+<li>Toca Eliminar permanentemente para confirmar por segunda vez.</li>
+</ol>
+<p>La eliminación borra de inmediato la información de inicio de sesión y todo el contenido guardado en este teléfono, y destruye las claves que los desbloquean. El registro de la cuenta en el servidor se elimina después. Si no hay red, la solicitud se pone en cola y se envía automáticamente la próxima vez que abras la app con conexión. La eliminación no se puede deshacer.</p>
+
+<h2>Datos que se eliminan con tu cuenta</h2>
+<ul>
+<li>La información de inicio de sesión y las credenciales de sesión en este teléfono;</li>
+<li>Todos los análisis guardados en este dispositivo y las claves que los desbloquean;</li>
+<li>El estado local del chat y la caché de importación (la limpieza puede fallar y dejar copias temporales; la app lo reintenta en el próximo inicio);</li>
+<li>El registro de la cuenta en el servidor, junto con la sesión actual de esa cuenta, los registros de uso y los resúmenes de solicitudes (actualmente en memoria; se borran al eliminar la cuenta o al reiniciar el servidor);</li>
+<li>Cuando el servidor confirma la eliminación, se eliminan las credenciales locales de eliminación.</li>
+</ul>
+
+<h2>Datos que se conservan tras eliminar la cuenta y sus plazos</h2>
+<table>
+<thead>
+<tr><th>Datos</th><th>Conservación y notas</th></tr>
+</thead>
+<tbody>
+<tr><td>Análisis guardados (en este dispositivo)</td><td>Permanecen hasta que los elimines; eliminar la cuenta también los borra.</td></tr>
+<tr><td>Modelos de voz descargados</td><td>Permanecen hasta que los borres en su configuración o junto con los archivos de la app; borrar la cuenta normalmente no los elimina.</td></tr>
+<tr><td>Texto no guardado, capturas y copias de audio</td><td>Se usan durante el proceso actual; una falla de limpieza o un análisis inconcluso puede dejar datos temporales, sin un plazo garantizado de borrado inmediato.</td></tr>
+<tr><td>Sesiones, registros de uso y resúmenes de solicitudes (servidor)</td><td>El acceso de sesión vence por defecto a las 24 horas, pero los registros no vencen automáticamente; eliminar la cuenta o reiniciar el servidor borra los registros actuales en memoria. El plazo de producción sigue pendiente de definición (待补).</td></tr>
+<tr><td>Credenciales locales de eliminación y solicitudes pendientes</td><td>Se guardan cifradas hasta la confirmación y la limpieza local exitosa, sin vencimiento automático fijo. Para reintentar, la app debe volver a ejecutarse con conexión.</td></tr>
+<tr><td>Comprobante mínimo de consentimiento tras la eliminación</td><td>Resumen del token de sesión, versión del aviso, decisión, fecha de decisión y versión de la app; vence 365 días después de la última decisión de aceptación o rechazo, no después de eliminar la cuenta.</td></tr>
+<tr><td>Registro de confirmación de eliminación</td><td>Se conserva sin fecha de vencimiento; solo contiene el resumen de la credencial de eliminación, la fecha de la primera confirmación y el hecho de que se confirmó la eliminación — sin identificador de cuenta, resumen del token de sesión, vínculo con el dispositivo ni contenido.</td></tr>
+<tr><td>Registros del dispositivo y cupos diarios, si están habilitados</td><td>El uso gratuito y los intentos de seguridad del dispositivo sobreviven a la eliminación y no tienen vencimiento implementado; los registros diarios pagados se eliminan al completar la eliminación, pero las filas históricas no vencen por sí solas. El plazo exacto sigue pendiente (待补).</td></tr>
+<tr><td>Registros técnicos y de terceros</td><td>Los plazos de la app, el alojamiento, el sistema operativo, RevenueCat, las tiendas, el servidor de descargas y los proveedores del modelo aún deben confirmarse (待补). No se aplica una promesa universal de 365 días ni de eliminación inmediata.</td></tr>
+<tr><td>Suscripción y transacciones de la tienda</td><td>Eliminar tu cuenta no cancela una suscripción ni borra los registros de transacciones de Apple/Google; administra la renovación en los ajustes de suscripciones de la tienda.</td></tr>
+</tbody>
+</table>
+
+<h2>Solicitar la eliminación sin usar la app</h2>
+<p>Si no puedes usar el flujo dentro de la app, puedes solicitar la eliminación de tu cuenta y de los datos relacionados mediante el correo de contacto: [联系邮箱待提供] (待补: el buzón y un plazo de procesamiento verificable).</p>
+
+<h2>Otras notas</h2>
+<ul>
+<li>Retirar el consentimiento de análisis no equivale a eliminar la cuenta y no borra automáticamente el contenido guardado, los registros de cupo ni las transacciones de la tienda.</li>
+<li>Que el servidor no encuentre una cuenta no prueba que se hayan eliminado datos de terceros. Algunas fallas de limpieza de credenciales locales también requieren reintento.</li>
+<li>Si no hay red al eliminar, la app reenvía la solicitud en el próximo inicio o al volver al primer plano; no se completa con la app cerrada.</li>
+</ul>
+
+</article>
+</main>
+<footer class="site-footer">Esta es una página estática. No usa scripts ni analítica.<br>联系邮箱：[联系邮箱待提供]</footer>
+</body>
+</html>
