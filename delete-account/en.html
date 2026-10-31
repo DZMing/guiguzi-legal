@@ -24,7 +24,7 @@
 </blockquote>
 <p><strong>Operator:</strong> Qayvi LLC</p>
 <p><strong>App:</strong> 口袋里的鬼谷子 (Android package com.guiguzi.app)</p>
-<p>This page explains how to delete your Guiguzi account in the app, what is deleted, and what is kept and for how long. The privacy policy is on the <a href="../privacy/en.html">English privacy policy</a> page.</p>
+<p>This page explains how to delete your random Guiguzi account in the app, what is deleted, and what is kept and for how long. The privacy policy is on the <a href="../privacy/en.html">English privacy policy</a> page.</p>
 
 <h2>Delete your account in the app</h2>
 <ol>
@@ -34,11 +34,11 @@
 <li>Tap Continue.</li>
 <li>Tap Delete permanently to confirm a second time.</li>
 </ol>
-<p>Deletion immediately removes the sign-in information and all saved content on this phone and destroys the keys that unlock them. The account record on the server is deleted afterwards. With no network, the request is queued and sent automatically the next time you open the app while online. Deletion cannot be undone.</p>
+<p>Deletion immediately removes that random account's local data and all saved content on this phone and destroys the keys that unlock them. The random account record on the server is deleted afterwards. With no network, the request is queued and sent automatically the next time you open the app while online. Deletion cannot be undone.</p>
 
 <h2>Data deleted with your account</h2>
 <ul>
-<li>The sign-in information and session credentials on this phone;</li>
+<li>The random account identifier and session credentials on this phone;</li>
 <li>All saved analyses on this device and the keys that unlock them;</li>
 <li>Local chat state and import cache (cleanup can fail and leave temporary copies; the app retries on the next start);</li>
 <li>The account record on the server, plus that account's current session, usage records, and request hashes (currently in-memory records, cleared on account deletion or a server restart);</li>
@@ -58,19 +58,19 @@
 <tr><td>Local deletion credentials and pending requests</td><td>Encrypted and retained until confirmation and successful local cleanup, with no fixed automatic expiry. Retrying requires the app to run again with connectivity.</td></tr>
 <tr><td>Minimal consent proof after deletion</td><td>Session-token hash, notice version, decision, decision time, and app version. It expires 365 days after the latest consent or refusal decision, not after account deletion.</td></tr>
 <tr><td>Deletion confirmation record</td><td>Kept with no expiry date. It contains only the deletion-credential hash, the first confirmation time, and the fact that deletion was confirmed. It does not contain an account ID, session-token hash, device link, or content.</td></tr>
-<tr><td>Device and daily quota records, if enabled</td><td>Device free-use and safety-attempt records remain after account deletion for <span class="placeholder">[device-quota retention period]</span>. Paid daily records are removed when account deletion succeeds.</td></tr>
-<tr><td>Logs and third-party records</td><td>App, hosting, and operating-system logs, and records held by RevenueCat, the stores, the download host, and the model provider, are kept for <span class="placeholder">[logs and third-party retention period]</span>. This page does not promise that those records are deleted in 365 days or immediately.</td></tr>
-<tr><td>Store subscription and transactions</td><td>Deleting your app account does not cancel a subscription or erase Apple or Google transaction records. Manage renewal in the store's subscription settings.</td></tr>
+<tr><td>Device and daily quota records</td><td>A scheduled sweep deletes device free-use records older than 730 days and safety-attempt records older than 35 days. They can remain after the random account is deleted until the sweep removes them. This release does not create paid daily records.</td></tr>
+<tr><td>Logs and third-party records</td><td>App, hosting, and operating-system logs, and records held by Google Play, the download host, and the model provider, are kept for <span class="placeholder">[logs and third-party retention period]</span>. This page does not promise that those records are deleted in 365 days or immediately.</td></tr>
+<tr><td>Google Play</td><td>This release does not include RevenueCat or in-app purchases, and it does not create a Google Play subscription. Deleting the random account is not a Google Play refund. The app is offered on Google Play only.</td></tr>
 </tbody>
 </table>
 
 <h2>Request deletion without using the app</h2>
-<p>If you cannot use the in-app flow, email <span class="placeholder">[contact email]</span> to ask us to delete your account and related data on our servers. Include <span class="placeholder">[information needed to find the account]</span> in the message. For a request that can be matched to an account, the processing time is <span class="placeholder">[deletion processing time]</span>.</p>
-<p>An email request covers only account data on our servers. Saved analyses that exist only on your phone cannot be deleted by email. Delete them in the app, or delete the app itself. On iPhone, Offload App keeps documents and data.</p>
+<p>If you cannot use the in-app flow, email <span class="placeholder">[contact email]</span> to ask us to delete your random account and related data on our servers. Include <span class="placeholder">[information needed to find the account]</span> in the message. For a request that can be matched to an account, the processing time is <span class="placeholder">[deletion processing time]</span>.</p>
+<p>An email request covers only account data on our servers. Saved analyses that exist only on your phone cannot be deleted by email. Delete them in the app, or uninstall the app, which normally removes its local files.</p>
 
 <h2>Other notes</h2>
 <ul>
-<li>Withdrawing analysis consent is not the same as deleting your account, and it does not automatically delete saved content, quota records, or store transactions.</li>
+<li>Withdrawing analysis consent is not the same as deleting your random account, and it does not automatically delete saved content or quota records. This release does not create store transactions.</li>
 <li>The server not finding an account mapping is not proof that third-party data has been deleted. Some local credential cleanup failures also require a retry.</li>
 <li>If there is no network at deletion time, the app resends the request when it next starts or returns to the foreground. It does not finish while the app is closed.</li>
 </ul>

@@ -4,7 +4,7 @@ These pages are still drafts. The draft banner stays on purpose. Nothing in the 
 
 Replace each token, including the square brackets. The same token is one value: every place it appears in that language should get the same text. Tokens are highlighted on the page (`span.placeholder`). Words inside the draft banner are instructions, not tokens.
 
-`DZMing/think-the-chinese-way` returned 404 to this environment, so `docs/store/privacy/release-gaps.md` and `docs/store/privacy/google-data-safety.md` were not read. Mismatches to confirm against those files are at the end.
+`DZMing/think-the-chinese-way` still returned 404 to this environment. That includes `docs/store/privacy/guiguzi-legal-android-corrections.patch` on PR #3 (commit `4bd8965`), `docs/store/privacy/release-gaps.md`, and `docs/store/privacy/google-data-safety.md`. The Android corrections in the HTML were written from the requested claims because `git am` had no patch to apply. Device free-use records are the 730-day side of the sweep and safety-attempt records are the 35-day side, in that order. Confirm that split against the quota sweep before publication. Other mismatches are at the end.
 
 ## Contact email
 
@@ -62,7 +62,7 @@ Value needed: the calendar date this policy is first published with the store re
 
 ## Retention periods
 
-Four different periods. Do not fill them with one shared number.
+Three periods below are still blank. Device-quota retention is filled and is not one of them. Do not fill the three blank periods with one shared number.
 
 ### Session and request-hash retention
 
@@ -83,34 +83,13 @@ Suggestion only, not inserted: 30 days after the session credential stops workin
 
 ### Device-quota retention
 
-Value needed: how long device free-use records and safety-attempt records are kept. The pages say these records stay after account deletion. Paid daily records are described separately and are removed when account deletion succeeds.
-
-Suggestion only, not inserted: 12 months after the last recorded attempt, then delete. That is long enough to discourage repeat free-allowance claims and shorter than keeping the records forever. Do not insert a period until expiry is implemented, including after a server restart. The previous draft said these records had no automatic expiry.
-
-| File | Line | Token |
-| --- | --- | --- |
-| privacy/zh-Hans.html | 38 | `[设备额度记录的保留期限]` |
-| privacy/zh-Hans.html | 77 | `[设备额度记录的保留期限]` |
-| privacy/zh-Hans.html | 101 | `[设备额度记录的保留期限]` |
-| privacy/zh-Hant.html | 38 | `[裝置額度紀錄的保留期限]` |
-| privacy/zh-Hant.html | 77 | `[裝置額度紀錄的保留期限]` |
-| privacy/zh-Hant.html | 101 | `[裝置額度紀錄的保留期限]` |
-| privacy/en.html | 38 | `[device-quota retention period]` |
-| privacy/en.html | 77 | `[device-quota retention period]` |
-| privacy/en.html | 101 | `[device-quota retention period]` |
-| privacy/es-419.html | 38 | `[plazo de conservación del cupo del dispositivo]` |
-| privacy/es-419.html | 77 | `[plazo de conservación del cupo del dispositivo]` |
-| privacy/es-419.html | 101 | `[plazo de conservación del cupo del dispositivo]` |
-| delete-account/zh-Hans.html | 61 | `[设备额度记录的保留期限]` |
-| delete-account/zh-Hant.html | 61 | `[裝置額度紀錄的保留期限]` |
-| delete-account/en.html | 61 | `[device-quota retention period]` |
-| delete-account/es-419.html | 61 | `[plazo de conservación del cupo del dispositivo]` |
+Filled. Not a token. A scheduled sweep deletes device free-use records older than 730 days and safety-attempt records older than 35 days. The records can remain after the random account is deleted until the sweep removes them. This release does not create paid daily records. The same sentences are in privacy section 4, the retention table, the accounts-without-sign-in subsection, and the deletion pages. Do not put the old 12-month suggestion back in.
 
 ### Logs and third-party retention
 
-Value needed: the retention period for app logs, hosting logs, operating-system logs, and records held by RevenueCat, the stores, the download host, and the model provider. Section 8 of each privacy policy uses the same token for InstaBox connection logs. If those periods differ, split the sentences before filling one number into every line.
+Value needed: the retention period for app logs, hosting logs, operating-system logs, and records held by Google Play, the download host, and the model provider. This release does not include RevenueCat, so that name is not in the sentence. Section 8 of each privacy policy uses the same token for InstaBox connection logs. If those periods differ, split the sentences before filling one number into every line.
 
-Suggestion only, not inserted: 30 days for Qayvi’s own request logs (route, status, response size, duration, and error code). Do not invent one number for InstaBox, the operating system, RevenueCat, Apple, Google, Hugging Face, or Alibaba Cloud Bailian. State each provider’s own period, or say the records follow that provider’s policy.
+Suggestion only, not inserted: 30 days for Qayvi’s own request logs (route, status, response size, duration, and error code). Do not invent one number for InstaBox, the operating system, Google Play, Hugging Face, or Alibaba Cloud Bailian. State each provider’s own period, or say the records follow that provider’s policy.
 
 | File | Line | Token |
 | --- | --- | --- |
@@ -159,7 +138,7 @@ Suggestion only, not inserted: 30 days from a request that contains enough infor
 
 ## Information needed to find the account
 
-Value needed: what a person must include in the email so Qayvi can find a sign-in-free account, and where that identifier is shown in the app. The pages say the app does not collect an email address or an Apple or Google sign-in identity, so the mailbox alone cannot be matched to an account. No identifier format is suggested. If the app does not show an installation id or account id, this token cannot be filled with a working instruction.
+Value needed: what a person must include in the email so Qayvi can find the random account, and where that identifier is shown in the app. The pages say the app does not collect an email address or a Google sign-in identity, so the mailbox alone cannot be matched to an account. No identifier format is suggested. If the app does not show an installation id or the random account id, this token cannot be filled with a working instruction. In-app deletion of that random account is already described and is not this token.
 
 | File | Line | Token |
 | --- | --- | --- |
@@ -180,37 +159,42 @@ These periods are written as current practice. They are not tokens.
 - Saved analyses: on the device until that record is deleted or the account is deleted.
 - Downloaded speech models: until removed in model settings or with the app files. Account deletion does not normally remove them.
 - Unsaved text, screenshots, and audio copies: current operation only. Cleanup is attempted; there is no guaranteed immediate-erasure time.
-- Store subscriptions and transaction records: not cancelled or deleted by deleting the app account.
+- Device free-use records: a scheduled sweep deletes records older than 730 days. They can remain after the random account is deleted until that sweep.
+- Safety-attempt records: the same sweep deletes records older than 35 days.
+- Paid daily records: not created in this release.
+- Purchases: this release does not include RevenueCat, in-app purchases, subscription restore, or a Google Play subscription. Deleting the random account is not a Google Play refund. The app is offered on Google Play only.
+- Device summary: a one-way hash of ANDROID_ID combined with an app namespace. The raw ANDROID_ID is not sent to the backend. The hash goes only to Qayvi’s backend, not to the analysis model.
+- On-device OCR: ML Kit. On-device audio transcription remains separate. Apple Vision is not named.
 
 ## Mismatches to confirm
 
-This environment could not read `DZMing/think-the-chinese-way` (`docs/store/privacy/release-gaps.md` and `docs/store/privacy/google-data-safety.md`). The repository returns 404. The notes below are conflicts among these pages, the product named for this release (口袋里的鬼谷子, Android `com.guiguzi.app`, Qayvi LLC), and the answers a Google Play Data safety form would have to give. Confirm each one against those two files before publication. This pull request does not publish the pages.
+This environment could not read `DZMing/think-the-chinese-way` (`docs/store/privacy/guiguzi-legal-android-corrections.patch`, `release-gaps.md`, and `google-data-safety.md`). The repository returns 404. The notes below are what these pages now say, set against the product named for this release (口袋里的鬼谷子, Android `com.guiguzi.app`, Qayvi LLC) and the answers a Google Play Data safety form would have to give. Confirm each open item against those files before publication. This pull request does not publish the pages.
 
-1. Android release versus iOS text. The named app is Android `com.guiguzi.app`. The pages still describe an iOS Keychain identifier, iOS Offload App (documents and data kept), and Apple subscriptions beside Google. If the store docs are Android-only, the iOS sentences do not belong on this listing. The Android path that must match Data safety is a hashed Android system identifier plus an app namespace, sent only to Qayvi’s backend.
+1. Android text is now on the pages. The device summary is a one-way hash of ANDROID_ID combined with an app namespace. The raw ANDROID_ID is not sent. There is no iOS Keychain sentence and no iOS Offload App sentence. OCR is ML Kit. The store named on the pages is Google Play only. Confirm `google-data-safety.md` uses that same device-id description.
 
-2. Beta limits that were removed as internal notes. The previous text said purchases and restore were disabled, release sign-in was not integrated, and a buildable package was not a working end-to-end service. Those sentences are gone. Sections on RevenueCat and account deletion now describe those flows as available. If `release-gaps.md` still says purchases are off or sign-in is not live, the pages overstate the release.
+2. RevenueCat is described as not included in this release, along with in-app purchases and subscription restore. Confirm that `release-gaps.md` still has purchases off. If a later build adds Google Play billing, section 5 is wrong until it is rewritten. Sign-in is still described as absent: the server creates a random account, and the in-app flow deletes that account.
 
-3. Device-quota expiry is a token, not a behavior the previous draft had implemented. The previous text said free-use and safety-attempt records had no automatic expiry, survived account deletion, and that reliable deletion across restarts was unfinished. Paid daily rows were removed on successful deletion, but older daily rows had no expiry. Filling `[device-quota retention period]` before that code exists would contradict the gap. Data safety cannot say that a deletion request deletes all data while these records remain.
+3. Device-quota retention is no longer a token. A scheduled sweep deletes device free-use records older than 730 days and safety-attempt records older than 35 days. They can remain after the random account is deleted until the sweep. This release does not create paid daily records. The 730/35 assignment follows the order those two record types already had, because the patch could not be read. Data safety still cannot say that a deletion request deletes all data while these records remain.
 
 4. Model training and China transfer. Confirmed conversation text and analysis context go phone → InstaBox in the United States → Alibaba Cloud Bailian in Beijing (Qwen answer, GLM precheck), over HTTPS. Session credentials and device summaries stay on the US server and are not sent to the model. The pages do not promise zero retention or no training. If `google-data-safety.md` says conversation text is not shared with a third party, is not transferred internationally, or is not used for model training, that form does not match section 8.
 
 5. Data-safety categories these pages imply, to check against `google-data-safety.md` rather than assume its answers:
-   - Email, phone, and Apple or Google sign-in identity: not collected.
+   - Email, phone, and Google sign-in identity: not collected.
    - User text: sent to Qayvi’s backend and then to Bailian. Purpose is app functionality. Shared with a third party.
-   - Photos and audio: processed on the device. The analysis request is text only. If the form marks Photos or Audio as collected, that does not match.
-   - Device or other IDs: collected and sent to Qayvi’s backend for quota control, not to RevenueCat or the model, and not for advertising. Declare them if the form currently says device IDs are not collected. The clauses apply only when the device-quota feature ships.
-   - Approximate location: not collected by the app’s own form. RevenueCat records may include transaction country or a country inferred from IP. Confirm whether the form’s location answer covers that.
-   - Financial info: no card number in the app. Store receipts or purchase tokens go to RevenueCat when someone purchases or restores. Purchase history may need to be declared.
+   - Photos and audio: processed on the device. Screenshot text recognition is ML Kit OCR. The analysis request is text only. If the form marks Photos or Audio as collected, that does not match.
+   - Device or other IDs: a one-way hash of ANDROID_ID plus an app namespace, sent to Qayvi’s backend for quota control, not to the model, and not for advertising. This release does not include RevenueCat. Declare the hashed device id if the form currently says device IDs are not collected.
+   - Approximate location: not collected by the app. This release does not include RevenueCat, so there is no transaction country or country inferred from IP in a purchase SDK.
+   - Financial info: no card number in the app. This release does not send a store receipt or purchase token and does not create a subscription.
    - Diagnostics: server request logs omit conversation text, account and session credentials, and IP addresses. The pages still say hosting, network, and SDK logs are not necessarily the same, and they do not claim every connection is encrypted. “Encrypted in transit: yes” for every data type is stronger than section 9. The analysis path itself is described as HTTPS.
-   - Advertising, data brokers, and cross-app ad tracking: not in the app. That is not a claim that providers receive no technical data (for example IP addresses on a Hugging Face model download, or RevenueCat connection metadata).
+   - Advertising, data brokers, and cross-app ad tracking: not in the app. That is not a claim that providers receive no technical data (for example IP addresses on a Hugging Face model download).
 
-6. Web account deletion. The deletion pages explain the in-app steps, what is deleted, what is kept, and an email fallback. Because there is no email or sign-in identity on the account, the email path works only if the user can supply another identifier. That identifier is still a token. Play’s deletion requirement is not met by an email address alone until that token is a real, visible id. Offline in-app deletion is queued until the next time the app is open and online. It does not finish while the app is closed. A server reply that the account mapping is gone is not proof that Bailian, RevenueCat, or the stores deleted their copies.
+6. Web account deletion. The deletion pages explain how to delete the random account in the app, what is deleted, what is kept, and an email fallback. Because there is no email or Google sign-in identity on the account, the email path works only if the user can supply another identifier. That identifier is still a token. Play’s deletion requirement is not met by an email address alone until that token is a real, visible id. Offline in-app deletion is queued until the next time the app is open and online. It does not finish while the app is closed. A server reply that the account mapping is gone is not proof that Bailian deleted its copies. This release does not create a RevenueCat or Google Play purchase record to delete.
 
-7. Withdrawing analysis consent. Declining updates the device only. It does not notify the server, does not guarantee cancellation of a request already running, and does not delete saved analyses, quota records, or store transactions. If the store docs say users can withdraw consent and processing stops, that does not match section 7.
+7. Withdrawing analysis consent. Declining updates the device only. It does not notify the server, does not guarantee cancellation of a request already running, and does not delete saved analyses or quota records. The pages say this release does not create store transactions. If the store docs say users can withdraw consent and processing stops, that does not match section 7.
 
 8. Age. The service is described as 18+ and the pages say age is not checked. That matches a “not directed at children” listing only if the store listing and content rating say the same thing. The 18+ sentence is not an age gate.
 
-9. Partial deletion that a “all data deleted” answer would miss. The deletion receipt is kept with no expiry (hash, first confirmation time, and the fact of confirmation). The minimal consent proof lasts 365 days from the latest consent or refusal, not from deletion. Device-quota records survive account deletion for the still-blank period. Store subscriptions are not cancelled.
+9. Partial deletion that a “all data deleted” answer would miss. The deletion receipt is kept with no expiry (hash, first confirmation time, and the fact of confirmation). The minimal consent proof lasts 365 days from the latest consent or refusal, not from deletion. Device free-use records can remain until they are older than 730 days, and safety-attempt records until they are older than 35 days. This release does not create a store subscription.
 
 10. Speech-model host. The pages name Hugging Face as the current download host. The previous draft said the production host was still undecided. If `release-gaps.md` still has the host as undecided, the Hugging Face sentence is only the beta host.
 
