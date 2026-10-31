@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>账号与数据删除（鬼谷子）</title>
+<title>账号与数据删除（口袋里的鬼谷子）</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -19,8 +19,12 @@
 <nav class="langs">语言：<a href="zh-Hans.html" aria-current="page">简体中文</a><a href="zh-Hant.html">繁體中文</a><a href="en.html">English</a><a href="es-419.html">Español (Latinoamérica)</a></nav>
 <article>
 <h1>账号与数据删除</h1>
-
-<p>本页说明鬼谷子（Guiguzi）App 的账号与数据处理：如何在 App 内删除账号、会删除哪些数据、会保留哪些数据以及保留期限。内容依据鬼谷子隐私政策草稿（2026-10-25）整理；标「待补」的项目尚未完成，正式发布前须补齐。</p>
+<blockquote>
+<p>草稿。方括号中的联系邮箱、保留期限、删除处理时间和用于查找账号的信息仍待填写。</p>
+</blockquote>
+<p><strong>运营者：</strong> Qayvi LLC</p>
+<p><strong>应用：</strong> 口袋里的鬼谷子（Android 包名 com.guiguzi.app）</p>
+<p>本页说明如何在鬼谷子 App 内删除账号、会删除哪些数据、会保留哪些数据以及保留期限。隐私政策见<a href="../privacy/zh-Hans.html">简体中文隐私政策</a>。</p>
 
 <h2>在 App 内删除账号</h2>
 <ol>
@@ -47,21 +51,21 @@
 <tr><th>数据</th><th>保留期限与说明</th></tr>
 </thead>
 <tbody>
-<tr><td>已保存的分析（本机）</td><td>本机保存的分析保留至你删除；删除账号时一并清除。</td></tr>
+<tr><td>已保存的分析（本机）</td><td>留在本机直到你删除该条记录；删除账号时一并清除。</td></tr>
 <tr><td>已下载的语音模型</td><td>保留至你在模型设置中删除或随 App 文件删除，通常不会随删号删除。</td></tr>
 <tr><td>未保存的文字、截图及音频副本</td><td>仅用于当前操作；清理失败或分析未结束时可能残留，没有保证即时擦除的时限。</td></tr>
-<tr><td>会话、使用记录及请求摘要（服务器）</td><td>默认 24 小时后不能继续使用该会话，但记录没有自动到期删除；删号或服务器重启时清除当前内存记录。正式环境的保留期仍须明确（待补）。</td></tr>
-<tr><td>本机删除凭证与待补发请求</td><td>加密保留至确认及本机清理成功，没有固定的自动过期时间；重试需要 App 再次运行并联网。</td></tr>
+<tr><td>会话、使用记录及请求摘要（服务器）</td><td>默认 24 小时后不能继续使用该会话。这些记录的保留期限为<span class="placeholder">[会话与请求摘要的保留期限]</span>。删除账号或服务器重启会清除当前内存中的这些记录。</td></tr>
+<tr><td>本机删除凭证与排队重试的请求</td><td>加密保留至确认及本机清理成功，没有固定的自动过期时间；重试需要 App 再次运行并联网。</td></tr>
 <tr><td>删号后的最小同意凭证</td><td>会话令牌摘要、告知版本、决定、决定时间和 App 版本；从最近一次同意／拒绝决定起 365 天到期，不是从删号起算。</td></tr>
 <tr><td>删除确认回执</td><td>长期保留、没有到期日；只含删除凭证摘要、首次确认时间和已确认删除的结论，不含账号 ID、会话令牌摘要、设备关联或正文。</td></tr>
-<tr><td>设备及每日额度记录（功能启用时）</td><td>设备免费次数与安全识别尝试记录在删号后保留，尚未实现到期清除；付费日记录在成功删号时删除，但历史日期行没有到期清除。具体期限仍待定（待补）。</td></tr>
-<tr><td>日志与第三方记录</td><td>App、托管平台、系统日志，以及 RevenueCat、商店、下载方和模型服务方的适用期限仍须核定（待补），不能统一承诺 365 天或即时删除。</td></tr>
+<tr><td>设备及每日额度记录（功能启用时）</td><td>设备免费次数与安全识别尝试记录在删除账号后仍会保留，保留期限为<span class="placeholder">[设备额度记录的保留期限]</span>。付费日记录在成功删除账号时删除。</td></tr>
+<tr><td>日志与第三方记录</td><td>App、托管平台、系统日志，以及 RevenueCat、商店、下载方和模型服务方记录的保留期限为<span class="placeholder">[日志与第三方记录的保留期限]</span>。本页不对这些记录承诺 365 天或即时删除。</td></tr>
 <tr><td>商店订阅与交易记录</td><td>删除 App 账号不会取消订阅，也不会删除 Apple／Google 商店的交易记录；请在商店的订阅设置中管理续费。</td></tr>
 </tbody>
 </table>
 
 <h2>无法使用 App 时如何申请删除</h2>
-<p>如你无法在 App 内操作，可通过联系邮箱申请删除账号与相关数据：[联系邮箱待提供]（待补：邮箱开通及可验证的处理时限）。</p>
+<p>如你无法在 App 内操作，可写信至<span class="placeholder">[联系邮箱]</span>申请删除账号与相关服务器数据。请在邮件中写明<span class="placeholder">[用于查找账号的信息]</span>。对于能够定位到账号的请求，处理时间为<span class="placeholder">[删除处理时间]</span>。</p>
 <p>邮件申请只处理服务器上的账号数据；只存在于这台手机上的已保存分析无法由邮件删除，须在 App 内删除，或删除 App 本体（iPhone 的「卸载 App」会保留文稿与数据）。</p>
 
 <h2>其他说明</h2>
@@ -73,6 +77,6 @@
 
 </article>
 </main>
-<footer class="site-footer">本页为静态页面，不使用脚本与统计。<br>联系邮箱：[联系邮箱待提供]</footer>
+<footer class="site-footer">本页为静态页面，不使用脚本与统计。<br>联系邮箱：<span class="placeholder">[联系邮箱]</span></footer>
 </body>
 </html>

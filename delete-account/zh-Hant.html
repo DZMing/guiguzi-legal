@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>帳號與資料刪除（鬼谷子）</title>
+<title>帳號與資料刪除（口袋裡的鬼谷子）</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -19,8 +19,12 @@
 <nav class="langs">語言：<a href="zh-Hans.html">简体中文</a><a href="zh-Hant.html" aria-current="page">繁體中文</a><a href="en.html">English</a><a href="es-419.html">Español (Latinoamérica)</a></nav>
 <article>
 <h1>帳號與資料刪除</h1>
-
-<p>本頁說明鬼谷子（Guiguzi）App 的帳號與資料處理：如何在 App 內刪除帳號、會刪除哪些資料、會保留哪些資料以及保留期限。內容依據鬼谷子隱私政策草稿（2026-10-25）整理；標「待補」的項目尚未完成，正式發布前須補齊。</p>
+<blockquote>
+<p>草稿。方括號中的聯絡信箱、保留期限、刪除處理時間和用於查找帳號的資訊仍待填寫。</p>
+</blockquote>
+<p><strong>營運者：</strong> Qayvi LLC</p>
+<p><strong>應用程式：</strong> 口袋裡的鬼谷子（Android 套件名稱 com.guiguzi.app）</p>
+<p>本頁說明如何在鬼谷子 App 內刪除帳號、會刪除哪些資料、會保留哪些資料以及保留期限。隱私政策見<a href="../privacy/zh-Hant.html">繁體中文隱私政策</a>。</p>
 
 <h2>在 App 內刪除帳號</h2>
 <ol>
@@ -47,21 +51,21 @@
 <tr><th>資料</th><th>保留期限與說明</th></tr>
 </thead>
 <tbody>
-<tr><td>已儲存的分析（本機）</td><td>本機儲存的分析保留至你刪除；刪除帳號時一併清除。</td></tr>
+<tr><td>已儲存的分析（本機）</td><td>留在本機直到你刪除該筆紀錄；刪除帳號時一併清除。</td></tr>
 <tr><td>已下載的語音模型</td><td>保留至你在模型設定中刪除或隨 App 檔案刪除，通常不會隨刪除帳號而刪除。</td></tr>
 <tr><td>未儲存的文字、截圖及音訊副本</td><td>僅用於目前操作；清理失敗或分析未結束時可能殘留，沒有保證即時抹除的時限。</td></tr>
-<tr><td>工作階段、使用紀錄及請求摘要（伺服器）</td><td>預設 24 小時後不能繼續使用該工作階段，但紀錄沒有自動到期刪除；刪除帳號或伺服器重新啟動時清除目前記憶體紀錄。正式環境的保留期仍須明確（待補）。</td></tr>
-<tr><td>本機刪除憑證與待補送請求</td><td>加密保留至確認及本機清理成功，沒有固定的自動過期時間；重試需要 App 再次執行並連線。</td></tr>
+<tr><td>工作階段、使用紀錄及請求摘要（伺服器）</td><td>預設 24 小時後不能繼續使用該工作階段。這些紀錄的保留期限為<span class="placeholder">[工作階段與請求摘要的保留期限]</span>。刪除帳號或伺服器重新啟動會清除目前記憶體中的這些紀錄。</td></tr>
+<tr><td>本機刪除憑證與排隊重試的請求</td><td>加密保留至確認及本機清理成功，沒有固定的自動過期時間；重試需要 App 再次執行並連線。</td></tr>
 <tr><td>刪除帳號後的最小同意憑證</td><td>工作階段權杖摘要、告知版本、決定、決定時間及 App 版本；從最近一次同意／拒絕決定起 365 天到期，不是從刪除帳號起算。</td></tr>
 <tr><td>刪除確認回執</td><td>長期保留、沒有到期日；只含刪除憑證摘要、首次確認時間和已確認刪除的結論，不含帳號 ID、工作階段權杖摘要、裝置關聯或正文。</td></tr>
-<tr><td>裝置及每日額度紀錄（功能啟用時）</td><td>裝置免費次數與安全辨識嘗試紀錄在刪除帳號後保留，尚未實作到期清除；付費日紀錄在成功刪除帳號時刪除，但歷史日期資料列沒有到期清除。具體期限仍待定（待補）。</td></tr>
-<tr><td>日誌與第三方紀錄</td><td>App、託管平台、系統日誌，以及 RevenueCat、商店、下載方和模型服務方的適用期限仍須核定（待補），不能統一承諾 365 天或即時刪除。</td></tr>
+<tr><td>裝置及每日額度紀錄（功能啟用時）</td><td>裝置免費次數與安全辨識嘗試紀錄在刪除帳號後仍會保留，保留期限為<span class="placeholder">[裝置額度紀錄的保留期限]</span>。付費日紀錄在成功刪除帳號時刪除。</td></tr>
+<tr><td>日誌與第三方紀錄</td><td>App、託管平台、系統日誌，以及 RevenueCat、商店、下載方和模型服務方紀錄的保留期限為<span class="placeholder">[日誌與第三方紀錄的保留期限]</span>。本頁不對這些紀錄承諾 365 天或即時刪除。</td></tr>
 <tr><td>商店訂閱與交易紀錄</td><td>刪除 App 帳號不會取消訂閱，也不會刪除 Apple／Google 商店的交易紀錄；請在商店的訂閱設定中管理續訂。</td></tr>
 </tbody>
 </table>
 
 <h2>無法使用 App 時如何申請刪除</h2>
-<p>如你無法在 App 內操作，可透過聯絡信箱申請刪除帳號與相關資料：[联系邮箱待提供]（待補：信箱開通及可驗證的處理時限）。</p>
+<p>如你無法在 App 內操作，可寫信至<span class="placeholder">[聯絡信箱]</span>申請刪除帳號與相關伺服器資料。請在郵件中寫明<span class="placeholder">[用於查找帳號的資訊]</span>。對於能夠定位到帳號的請求，處理時間為<span class="placeholder">[刪除處理時間]</span>。</p>
 <p>電子郵件申請只處理伺服器上的帳號資料；只存在這台手機上的已儲存分析無法由郵件刪除，須在 App 內刪除，或刪除 App 本體（iPhone 的「卸載 App」會保留文件與資料）。</p>
 
 <h2>其他說明</h2>
@@ -73,6 +77,6 @@
 
 </article>
 </main>
-<footer class="site-footer">本頁為靜態頁面，不使用指令碼與統計。<br>联系邮箱：[联系邮箱待提供]</footer>
+<footer class="site-footer">本頁為靜態頁面，不使用指令碼與統計。<br>聯絡信箱：<span class="placeholder">[聯絡信箱]</span></footer>
 </body>
 </html>
