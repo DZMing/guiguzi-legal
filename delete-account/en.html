@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Account & Data Deletion (Guiguzi)</title>
+<title>Account & Data Deletion (口袋里的鬼谷子)</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,61 +18,65 @@
 <main>
 <nav class="langs">Languages：<a href="zh-Hans.html">简体中文</a><a href="zh-Hant.html">繁體中文</a><a href="en.html" aria-current="page">English</a><a href="es-419.html">Español (Latinoamérica)</a></nav>
 <article>
-<h1>Account & Data Deletion</h1>
-
-<p>This page explains how Guiguzi handles account and data deletion: how to delete your account in the app, what is deleted, and what is retained and for how long. It is based on the Guiguzi privacy policy draft (2026-10-25). Items marked 待补 (to be supplied) are not yet complete and must be finished before release.</p>
+<h1>Account &amp; Data Deletion</h1>
+<blockquote>
+<p>Draft. Bracketed contact email, retention periods, deletion processing time, and the information needed to find the account are still blank.</p>
+</blockquote>
+<p><strong>Operator:</strong> Qayvi LLC</p>
+<p><strong>App:</strong> 口袋里的鬼谷子 (Android package com.guiguzi.app)</p>
+<p>This page explains how to delete your random Guiguzi account in the app, what is deleted, and what is kept and for how long. The privacy policy is on the <a href="../privacy/en.html">English privacy policy</a> page.</p>
 
 <h2>Delete your account in the app</h2>
 <ol>
 <li>Open Guiguzi and tap Menu at the top right of the home screen.</li>
-<li>Choose Saved (the app's own copy also calls this the settings entry).</li>
+<li>Choose Saved (the in-app copy also calls this the settings entry).</li>
 <li>Tap Delete account at the bottom of the page.</li>
 <li>Tap Continue.</li>
 <li>Tap Delete permanently to confirm a second time.</li>
 </ol>
-<p>Deletion immediately removes the sign-in information and all saved content on this phone and destroys the keys that unlock them. The account record on the server is deleted afterwards. With no network, the request is queued and sent automatically the next time you open the app while online. Deletion cannot be undone.</p>
+<p>Deletion immediately removes that random account's local data and all saved content on this phone and destroys the keys that unlock them. The random account record on the server is deleted afterwards. With no network, the request is queued and sent automatically the next time you open the app while online. Deletion cannot be undone.</p>
 
 <h2>Data deleted with your account</h2>
 <ul>
-<li>The sign-in information and session credentials on this phone;</li>
+<li>The random account identifier and session credentials on this phone;</li>
 <li>All saved analyses on this device and the keys that unlock them;</li>
 <li>Local chat state and import cache (cleanup can fail and leave temporary copies; the app retries on the next start);</li>
 <li>The account record on the server, plus that account's current session, usage records, and request hashes (currently in-memory records, cleared on account deletion or a server restart);</li>
 <li>After the server confirms deletion, the local deletion credentials are removed.</li>
 </ul>
 
-<h2>Data retained after account deletion, and retention periods</h2>
+<h2>Data kept after account deletion, and for how long</h2>
 <table>
 <thead>
 <tr><th>Data</th><th>Retention and notes</th></tr>
 </thead>
 <tbody>
-<tr><td>Saved analyses (on this device)</td><td>Saved analyses remain until you delete them; account deletion also clears them.</td></tr>
-<tr><td>Downloaded speech models</td><td>Remain until you remove them in model settings or delete the app files; account deletion does not normally remove them.</td></tr>
-<tr><td>Unsaved text, screenshots, and audio copies</td><td>Kept for the current workflow; failed cleanup or unfinished analysis can leave temporary data, with no guaranteed immediate erasure time.</td></tr>
-<tr><td>Sessions, usage records, and request hashes (server)</td><td>Session access expires after 24 hours by default, but records have no automatic expiry; account deletion or a server restart clears the current in-memory records. Production retention remains to be specified (待补).</td></tr>
-<tr><td>Local deletion credentials and pending requests</td><td>Encrypted and retained until confirmation and successful local cleanup; no fixed automatic expiry. Retrying requires the app to run again with connectivity.</td></tr>
-<tr><td>Minimal consent proof after deletion</td><td>Session-token hash, notice version, decision, decision time, and app version; expires 365 days after the latest consent/refusal decision, not after account deletion.</td></tr>
-<tr><td>Deletion confirmation record</td><td>Retained indefinitely with no expiry; it contains only the deletion-credential hash, the first confirmation time, and the fact that deletion was confirmed — no account ID, session-token hash, device link, or content.</td></tr>
-<tr><td>Device and daily quota records, if enabled</td><td>Device free-use and safety-attempt records survive account deletion and have no implemented expiry; paid daily records are removed on successful account deletion, but older daily rows otherwise have no expiry. The exact period remains pending (待补).</td></tr>
-<tr><td>Logs and third-party records</td><td>App, hosting, and operating-system logs, and the applicable periods of RevenueCat, the stores, the download host, and the model providers, still require confirmation (待补). No universal 365-day or immediate-deletion promise applies.</td></tr>
-<tr><td>Store subscription and transactions</td><td>Deleting your app account does not cancel a subscription or erase Apple/Google transaction records; manage renewal in the store's subscription settings.</td></tr>
+<tr><td>Saved analyses (on this device)</td><td>Remain on the device until you delete that record. Account deletion clears them as well.</td></tr>
+<tr><td>Downloaded speech models</td><td>Remain until you remove them in model settings or delete the app files. Account deletion does not normally remove them.</td></tr>
+<tr><td>Unsaved text, screenshots, and audio copies</td><td>Kept only for the current workflow. Failed cleanup or unfinished analysis can leave temporary data, with no guaranteed immediate erasure time.</td></tr>
+<tr><td>Sessions, usage records, and request hashes (server)</td><td>The session credential stops working after 24 hours by default. These records are kept for <span class="placeholder">[session and request-hash retention period]</span>. Account deletion or a server restart clears the copies currently held in memory.</td></tr>
+<tr><td>Local deletion credentials and pending requests</td><td>Encrypted and retained until confirmation and successful local cleanup, with no fixed automatic expiry. Retrying requires the app to run again with connectivity.</td></tr>
+<tr><td>Minimal consent proof after deletion</td><td>Session-token hash, notice version, decision, decision time, and app version. It expires 365 days after the latest consent or refusal decision, not after account deletion.</td></tr>
+<tr><td>Deletion confirmation record</td><td>Kept with no expiry date. It contains only the deletion-credential hash, the first confirmation time, and the fact that deletion was confirmed. It does not contain an account ID, session-token hash, device link, or content.</td></tr>
+<tr><td>Device and daily quota records</td><td>A scheduled sweep deletes device free-use records older than 730 days and safety-attempt records older than 35 days. They can remain after the random account is deleted until the sweep removes them. This release does not create paid daily records.</td></tr>
+<tr><td>Logs and third-party records</td><td>App, hosting, and operating-system logs, and records held by Google Play, the download host, and the model provider, are kept for <span class="placeholder">[logs and third-party retention period]</span>. This page does not promise that those records are deleted in 365 days or immediately.</td></tr>
+<tr><td>Google Play</td><td>This release does not include RevenueCat or in-app purchases, and it does not create a Google Play subscription. Deleting the random account is not a Google Play refund. The app is offered on Google Play only.</td></tr>
 </tbody>
 </table>
 
 <h2>Request deletion without using the app</h2>
-<p>If you cannot use the in-app flow, you can request deletion of your account and related data through the contact email: [联系邮箱待提供] (待补: the mailbox and a verifiable processing time).</p>
-<p>An email request covers only account data on our servers. Saved analyses that exist only on your phone cannot be deleted by email; delete them in the app, or delete the app itself (on iPhone, Offload App keeps documents and data).</p>
+<p>If you cannot use the in-app flow, email <span class="placeholder">[contact email]</span> to ask us to delete your random account and related data on our servers. Include <span class="placeholder">[information needed to find the account]</span> in the message. For a request that can be matched to an account, the processing time is <span class="placeholder">[deletion processing time]</span>.</p>
+<p>An email request covers only account data on our servers. Saved analyses that exist only on your phone cannot be deleted by email. Delete them in the app, or uninstall the app, which normally removes its local files.</p>
 
 <h2>Other notes</h2>
 <ul>
-<li>Withdrawing analysis consent is not the same as deleting your account, and it does not automatically delete saved content, quota records, or store transactions.</li>
+<li>Withdrawing analysis consent is not the same as deleting your random account, and it does not automatically delete saved content or quota records. This release does not create store transactions.</li>
 <li>The server not finding an account mapping is not proof that third-party data has been deleted. Some local credential cleanup failures also require a retry.</li>
-<li>If there is no network at deletion time, the app resends the request when it next starts or returns to the foreground; it does not complete while the app is closed.</li>
+<li>If there is no network at deletion time, the app resends the request when it next starts or returns to the foreground. It does not finish while the app is closed.</li>
 </ul>
 
 </article>
 </main>
-<footer class="site-footer">This is a static page. It uses no scripts and no analytics.<br>联系邮箱：[联系邮箱待提供]</footer>
+<footer class="site-footer">This is a static page. It uses no scripts and no analytics.<br>Contact email: <span class="placeholder">[contact email]</span></footer>
 </body>
 </html>

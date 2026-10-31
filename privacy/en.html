@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guiguzi Privacy Policy (English)</title>
+<title>Privacy Policy for 口袋里的鬼谷子 (English)</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,93 +18,91 @@
 <main>
 <nav class="langs">Languages：<a href="zh-Hans.html">简体中文</a><a href="zh-Hant.html">繁體中文</a><a href="en.html" aria-current="page">English</a><a href="es-419.html">Español (Latinoamérica)</a></nav>
 <article>
-<h1>Guiguzi Privacy Policy — draft</h1>
+<h1>Privacy Policy for 口袋里的鬼谷子 — draft</h1>
 <blockquote>
-<p>Internal review draft, 2026-10-25. Not ready for publication. Device-related provisions apply only if the reviewed device-quota feature is included in the released app. Resolve all pending items against the actual release before publishing.</p>
+<p>Draft, 2026-10-25. Not for publication yet. Bracketed contact email, effective date, retention periods, and deletion processing time are still blank.</p>
 </blockquote>
-<p><strong>Effective date:</strong> Pending publication</p>
-<p><strong>Operator / data controller:</strong> Pending legal entity</p>
-<p><strong>Contact email:</strong> [联系邮箱待提供]</p>
+<p><strong>Effective date:</strong> <span class="placeholder">[effective date]</span></p>
+<p><strong>Operator / data controller:</strong> Qayvi LLC</p>
+<p><strong>Contact email:</strong> <span class="placeholder">[contact email]</span></p>
 <h2>1. Scope and operator</h2>
-<p>Guiguzi helps you review text from conversations you choose to provide. This policy explains local processing, online analysis, subscriptions, and your choices. The operator and working contact address must be supplied above before release.</p>
-<p>The beta deployment target is an InstaBox server in the United States, with real v9 analysis using Alibaba Cloud Bailian in Beijing. Purchases and subscription restoration are disabled during beta. Release sign-in is not yet integrated: a buildable package is not a working end-to-end service. Simulated development mode remains local-development-only. This work does not establish an actual deployment, production accounts, or validated payments.</p>
+<p>口袋里的鬼谷子 (Android package com.guiguzi.app, called Guiguzi below) is operated by Qayvi LLC. Guiguzi helps you review text from conversations you choose to provide. This policy explains local processing, online analysis, and your choices. Contact email: <span class="placeholder">[contact email]</span>.</p>
 <h2>2. Information processed on your device</h2>
-<p>Screenshots and imported audio are processed on your device for text recognition or transcription. The analysis request contains text, not the original image or audio file. You can review and mask the text first; masking does not guarantee that all identifying information has been removed. Temporary copies can remain when cleanup fails. Originals in your photo library or other apps are not deleted by our cleanup.</p>
-<p>Saving an analysis is manual. Saved records contain the confirmed text, result, record identifier, date, format version, and interface language, encrypted on this device. Backup and migration exclusions are configured but still require release-device verification. Clearing the current conversation does not delete saved records. Removing the app normally removes its local files; iOS Offload App retains documents and data. Copied replies remain in the system clipboard outside our deletion controls.</p>
+<p>Screenshots are recognized on your device with ML Kit OCR. Imported audio is transcribed on your device. The analysis request contains text, not the original image or audio file. You can review and mask the text first; masking does not guarantee that all identifying information has been removed. Temporary copies can remain when cleanup fails. Originals in your photo library or other apps are not deleted by our cleanup.</p>
+<p>Saving an analysis is manual. Saved records contain the confirmed text, result, record identifier, date, format version, and interface language, encrypted on this device. Backup and device-migration exclusions are configured; actual results can differ by operating system and how the app was installed. Clearing the current conversation does not delete saved records. Deleting your account clears saved analyses on this device and destroys the keys that unlock them. Downloaded speech models are not normally removed by account deletion. Removing the app normally removes its local files. Copied replies remain in the system clipboard outside our deletion controls.</p>
 <h2>3. Online text and account information</h2>
-<p>When you accept the processing notice and submit an analysis, the confirmed text and selected routing information are sent to our configured backend with a session credential, consent version, and request identifier. The server creates a random account identifier. The reviewed code does not collect an email address, telephone number, or Apple/Google sign-in identity through a working login service. The analysis context contains the selected interface/reply languages and anonymous speaker roles; it does not send the account identifier, session credential, or device identifier to the model.</p>
-<p>The backend uses the text to generate a result and keeps usage counts and a hash of each completed request to prevent repeated charging. A hash linked to an account is not anonymous data. Text is not automatically saved as an analysis history on the backend, but an unfinished operation can retain it after a timeout. Production model processing, retention, and any training use remain to be confirmed before online release.</p>
-<h2>4. Device identifier — conditional release feature</h2>
-<p>If the device-quota feature is included, the app derives a device summary using a one-way hash of an app-specific value: a random identifier held in the iOS Keychain, or the Android system identifier combined with an app namespace. Raw Android identifiers are not sent to our backend. The summary goes only to our backend, not to RevenueCat or the analysis model. We use it to prevent repeated free allowances and to limit additional analysis attempts after an allowance is exhausted. It is a device identifier, not proof of identity or anonymous data.</p>
-<p>The summary may remain stable across reinstallations, but operating-system changes, resets, or other conditions can change it. Deleting an account or withdrawing analysis consent does not erase the independent device allowance and attempt records. The reviewed implementation has no automatic expiry for those records. <strong>Pending before release: a specific retention period, deletion procedure, and justification for the exception.</strong></p>
-<h2>5. Purchases and RevenueCat</h2>
-<p>When real subscriptions are enabled and you enter a purchase or restore flow, RevenueCat processes our account identifier, products, store receipts or purchase tokens, subscription status, and operational device/application information. It supports purchase validation, access to paid features, fraud prevention, and purchase analytics. Automatic advertising/device-identifier collection and SDK diagnostics are disabled in our integration; this does not eliminate ordinary network metadata. Chat text, images, audio, and account-deletion credentials are not passed to RevenueCat by our code.</p>
-<p>RevenueCat's customer documentation describes transaction country or country inferred from an IP address, and recent connection times. The actual project settings and this country processing need confirmation before submission. Apple or Google handles payment details in its store; our app has no card-number collection form. Deleting your app account does not cancel a store subscription or erase the store's transaction records; manage renewal in the store's subscription settings.</p>
+<p>When you accept the processing notice and submit an analysis, the confirmed text and selected routing information are sent to our configured backend with a session credential, consent version, and request identifier. The server creates a random account identifier. We do not collect an email address, telephone number, or a Google sign-in identity. The analysis context contains the selected interface and reply languages and anonymous speaker roles. The account identifier, session credential, and device identifier are not sent to the model.</p>
+<p>The backend uses the text to generate a result and keeps usage counts and a hash of each completed request to prevent repeated charging. A hash linked to an account is not anonymous data. Text is not automatically saved as an analysis history on the backend, but an unfinished operation can retain it after a timeout. Section 8 describes how the model provider retains data and whether it may use data for training. This policy does not promise zero retention or that the text is not used for training.</p>
+<h2>4. Device summary</h2>
+<p>The app derives a device summary with a one-way hash of ANDROID_ID combined with an app namespace. The raw ANDROID_ID is not sent to our backend. The hashed summary goes only to our backend and is not sent to the analysis model. This release does not include RevenueCat. We use the summary to prevent repeated free allowances and to limit additional analysis attempts after an allowance is exhausted. It is a device identifier, not proof of identity or anonymous data.</p>
+<p>The summary may remain stable across reinstallations, but operating-system changes, resets, or other conditions can change it. Deleting an account or withdrawing analysis consent does not erase the independent device allowance and attempt records. A scheduled sweep deletes device free-use records older than 730 days and safety-attempt records older than 35 days. Those records can remain after the random account is deleted until the sweep removes them.</p>
+<h2>5. Purchases in this release</h2>
+<p>This release does not include RevenueCat, in-app purchases, or subscription restore. The app does not send an account identifier, product, store receipt, or purchase token to RevenueCat. There is no card-number collection form. The app is offered on Google Play only.</p>
+<p>Deleting the random account is not a Google Play refund and does not cancel a purchase made outside this release. This release does not create a subscription.</p>
 <h2>6. Retention periods</h2>
 <table>
 <thead>
 <tr>
 <th>Information</th>
-<th>Reviewed retention and release conditions</th>
+<th>Retention</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Unsaved text, screenshots, and audio copies</td>
-<td>Kept for the current workflow; cleanup is attempted on relevant clear/delete/startup paths. Failed cleanup or unfinished analysis can leave temporary data; there is no guaranteed immediate erasure time.</td>
+<td>Kept for the current workflow; cleanup is attempted on relevant clear, delete, and startup paths. Failed cleanup or unfinished analysis can leave temporary data. There is no guaranteed immediate erasure time.</td>
 </tr>
 <tr>
 <td>Saved analyses and downloaded speech models</td>
-<td>Saved analyses remain until deleted. Valid models remain until removed in model settings or with app files; account deletion does not normally remove them.</td>
+<td>Saved analyses remain on the device until you delete that record or delete your account. Valid speech models remain until you remove them in model settings or delete the app files. Account deletion does not normally remove them.</td>
 </tr>
 <tr>
 <td>Sessions, usage records, and request hashes</td>
-<td>Session access expires after 24 hours by default, but records have no automatic expiry; account deletion or a server restart clears the reviewed in-memory records. Production retention must be specified.</td>
+<td>The session credential stops working after 24 hours by default. These records are kept for <span class="placeholder">[session and request-hash retention period]</span>. Account deletion or a server restart clears the copies currently held in memory.</td>
 </tr>
 <tr>
 <td>Local deletion credentials and pending requests</td>
-<td>Encrypted and retained until confirmation and successful local cleanup; no fixed automatic expiry. Retrying requires the app to run again with connectivity.</td>
+<td>Encrypted and retained until confirmation and successful local cleanup, with no fixed automatic expiry. Retrying requires the app to run again with connectivity.</td>
 </tr>
 <tr>
 <td>Minimal consent proof after deletion</td>
-<td>A session-token hash, notice version, decision, decision time, and app version; expires 365 days after the latest consent/refusal decision, not 365 days after deletion. The prototype checks expiry at startup and normally hourly; a restart can remove it earlier.</td>
+<td>A session-token hash, notice version, decision, decision time, and app version. It expires 365 days after the latest consent or refusal decision, not 365 days after deletion. It is removed when it expires. A server restart can remove it earlier.</td>
 </tr>
 <tr>
 <td>Deletion confirmation record</td>
-<td>A confirmed deletion receipt is retained indefinitely: only the deletion-credential hash, first confirmation time, and the fact that deletion was confirmed. It contains no account ID, session-token hash, device link, or content. This lets a device holding a deletion credential with no expiry confirm deletion years later. The separate in-memory local-deletion marker and development-only receipt for an unconfigured provider still expire after 365 days; neither proves provider deletion.</td>
+<td>A confirmed deletion receipt is retained with no expiry date. It contains only the deletion-credential hash, the first confirmation time, and the fact that deletion was confirmed. It contains no account ID, session-token hash, device link, or content. The on-device deletion credential has no expiry, so the receipt can still confirm years later that the old account was deleted. A separate in-memory marker of local deletion expires after 365 days and does not prove that a service provider has deleted data.</td>
 </tr>
 <tr>
-<td>Device and daily quota records, if enabled</td>
-<td>Device free-use and safety-attempt records survive account deletion and have no implemented expiry. Paid daily records are removed on successful account deletion, but old daily rows otherwise have no expiry. The period and reliable deletion across restarts remain pending.</td>
+<td>Device and daily quota records</td>
+<td>A scheduled sweep deletes device free-use records older than 730 days and safety-attempt records older than 35 days. They can remain after the random account is deleted until the sweep removes them. This release does not create paid daily records.</td>
 </tr>
 <tr>
 <td>Logs and third-party records</td>
-<td>App/host/operating-system log retention and the applicable RevenueCat, store, download-host, and future model retention periods require confirmation. No universal 365-day or immediate-deletion promise applies to them.</td>
+<td>App, hosting, and operating-system logs, and records held by Google Play, the download host, and the model provider, are kept for <span class="placeholder">[logs and third-party retention period]</span>. This policy does not promise that those records are deleted in 365 days or immediately.</td>
 </tr>
 </tbody>
 </table>
 <h2>7. Deletion and withdrawal</h2>
-<p>You can clear the current conversation, delete individual saved records, remove speech models in their settings, or request account deletion in the app. These actions have different scopes. Account deletion attempts local cleanup and backend deletion; offline or failed operations may be queued and retried when the app starts or returns to the foreground. A server saying it no longer has an account mapping is not evidence that third-party data has been deleted. Some local credential cleanup failures also require retry.</p>
-<p>You can decline further analysis. In the reviewed app, declining only changes local state; the backend can record a withdrawal, but the app does not yet send that notification. Withdrawal does not guarantee cancellation of a request already in progress, and it does not automatically delete saved records, quota records, or store transactions. <strong>Pending before publication: a working public account-deletion webpage, a contact channel, and verifiable completion times.</strong> Any lawful retention exceptions must be explained and limited; device records are not silently covered by a claim to delete everything.</p>
+<p>You can clear the current conversation, delete individual saved records, remove speech models in their settings, or delete the random account in the app. These actions have different scopes. Account deletion attempts local cleanup and backend deletion. Offline or failed operations may be queued and retried when the app starts or returns to the foreground. A server response that it no longer has an account mapping is not evidence that third-party data has been deleted. Some local credential cleanup failures also require a retry.</p>
+<p>You can decline further analysis. Declining updates the choice on this device only. It does not notify our servers, it does not guarantee cancellation of a request already in progress, and it does not delete saved records or quota records. This release does not create store transactions. You can also request deletion as described on the <a href="../delete-account/en.html">Account &amp; Data Deletion</a> page, or email <span class="placeholder">[contact email]</span>. For a request that can be matched to an account, the processing time is <span class="placeholder">[deletion processing time]</span>. Data kept under a legal exception is limited to what this policy describes. Deleting the random account does not erase device free-use or safety-attempt records before the sweep, and it is not a deletion of every record.</p>
 <h2>8. Service providers and international processing</h2>
-<p>RevenueCat supports subscriptions. Apple and Google operate their stores. Hugging Face and its delivery network currently host downloadable speech models; downloading exposes connection information such as IP addresses, but our download request does not contain your conversations or audio. The production speech-model download host remains to be finalized. Local Vision/ML Kit/Whisper processing is separate from online conversation analysis.</p>
-<p>The beta data path is <strong>phone → InstaBox server in the United States → Alibaba Cloud Bailian in Beijing, China</strong>, using HTTPS on remote connections. Session credentials, consent records, and device summaries reach the US server; only confirmed conversation text and analysis context continue to Beijing, without session credentials or device summaries. This involves cross-border processing in the US and China. InstaBox hosting, connection logs, and retention policies require separate verification.</p>
-<p><strong>Internal testing only; review again before public store release.</strong> The online analysis provider is <strong>Alibaba Cloud Bailian (阿里云百炼)</strong>, using its <strong>Beijing</strong> processing region. For users outside China, the confirmed conversation text and analysis context are transferred across borders to <strong>China</strong> for processing. Qwen generates the answer and GLM performs the semantic precheck. Applicable contracts, subprocessors, transfer safeguards, retention, deletion, and training restrictions remain subject to verification before release; this draft makes no zero-retention or no-training promise. RevenueCat processing terms and locations also require separate verification.</p>
+<p>This release does not include RevenueCat. Google Play is the only store. Hugging Face and its delivery network currently host downloadable speech models. Downloading exposes connection information such as IP addresses, but our download request does not contain your conversations or audio. On-device ML Kit OCR and Whisper processing is separate from online conversation analysis.</p>
+<p>Online analysis follows this path: <strong>phone → InstaBox server in the United States → Alibaba Cloud Bailian in Beijing, China</strong>. Remote connections use HTTPS. Session credentials, consent records, and device summaries reach the US server. Only confirmed conversation text and analysis context continue to Beijing. Session credentials and device summaries are not sent to the model. This path involves processing in the United States and in China. InstaBox may keep connection logs for <span class="placeholder">[logs and third-party retention period]</span>.</p>
+<p>The online analysis provider is <strong>Alibaba Cloud Bailian</strong>, in its <strong>Beijing</strong> region. <strong>For users outside China, confirmed conversation text and analysis context are transferred to China</strong> for processing. Qwen generates the answer and GLM performs the semantic precheck. The model provider's retention period is <span class="placeholder">[model-provider retention period]</span>. This policy does not promise zero retention or that this content is not used for training.</p>
 <h2>9. Security, logs, and tracking</h2>
-<p>Saved analyses and deletion credentials use encryption on the device. Backend request logs are limited to route, status, response size, duration, and a fixed error code where needed; the reviewed logger omits conversation text, account/session credentials, and IP addresses. Native components still produce some local operational logs, including language and filesystem information. Hosting/network logs and SDK behavior need separate verification. We cannot claim that there are no logs or that every current development connection is encrypted.</p>
-<p>No advertising, data-broker, or cross-app advertising-tracking integration was found in the reviewed application code. This is not a claim that providers receive no technical information. <strong>Pending before release: HTTPS across all remote data paths, production access controls, database/backup protection, and tests of retention and deletion.</strong></p>
+<p>Saved analyses and deletion credentials are encrypted on the device. Backend request logs are limited to route, status, response size, duration, and a fixed error code where needed. Server logs do not include conversation text, account or session credentials, or IP addresses. Native components can still write local operational logs, including language and file paths. Hosting logs, network logs, and SDK behavior are not necessarily the same as those server logs. We do not claim that there are no logs, and we do not claim that every connection is encrypted.</p>
+<p>The app does not include advertising, data-broker, or cross-app advertising tracking. Service providers can still receive technical information.</p>
 <h2>10. Your rights and processing grounds</h2>
-<p>Depending on applicable law, you may request access, correction, deletion, portability, restriction, or object to processing and complain to a supervisory authority. Use the contact channel above once it has been provided. Requests must account for identity verification and lawful, specifically explained retention exceptions; no working contact channel is implied by this draft.</p>
-<p>The processing notice governs your choice to submit text. Subscription handling provides the service you request. Fraud prevention and device allowance control may rely on legitimate interests where permitted, but only after an appropriate necessity and balancing assessment; this draft does not establish that assessment or an exemption from device-access rules. Applicable legal grounds and sensitive information safeguards must be confirmed for each launch market.</p>
+<p>Depending on applicable law, you may request access, correction, deletion, portability, or restriction, object to processing, and complain to a supervisory authority. Contact us at <span class="placeholder">[contact email]</span>. We may need to verify your identity, and requests are subject to the retention exceptions described in this policy.</p>
+<p>The processing notice is how you choose whether to send text. Fraud prevention and device-allowance control are used to provide and protect the service. This release does not include a subscription. Where the law allows, that processing may rely on legitimate interests, but only after a necessity and balancing assessment. This policy does not mean that assessment has been completed, and it does not mean device-access rules do not apply. The rights you can actually exercise depend on the law that applies to you.</p>
 <h2>11. Adults only</h2>
-<p>The service is intended for people aged 18 or older. Do not submit material you are not entitled to provide, and remove unnecessary information about other people, especially children. The reviewed code does not verify age; this policy is not evidence of an implemented age gate.</p>
-<h3>Sign-in-free beta</h3>
-<p>The beta server assigns an anonymous installation ID without collecting email or third-party sign-in identities. This is a linkable pseudonymous identifier, not fully anonymous data. Sessions are memory-only and must be reissued after restart. Deletion credentials are encrypted locally; the existing server SQLite ledger stores only credential hashes and IDs needed for deletion. Account deletion clears local content and revokes the server identity; offline requests are retried when the app next opens online. Device free-use records remain under the existing retention rules and are not reset by reissuance or deletion. If the payment provider is not configured, the app reports that explicitly rather than claiming provider-confirmed deletion.</p>
+<p>The service is for people aged 18 or older. Do not submit material you are not entitled to provide, and remove unnecessary information about other people, especially children. The service does not currently verify age. Stating that it is for people 18 or older is not an age gate.</p>
+<h3>Accounts without sign-in</h3>
+<p>The server creates a random account and assigns an installation identifier. It does not collect an email address or a Google sign-in identity. The installation identifier can be linked to a session. That installation identifier is pseudonymous, not fully anonymous data. Sessions are stored only in memory and must be issued again after the server restarts. Deletion credentials are encrypted on the device. The server stores a hash of the credential and the identifiers needed to finish deletion. Deleting the random account in the app clears local content and revokes that account on the server. If the device is offline, the request is sent the next time you open the app online. A scheduled sweep deletes device free-use records older than 730 days and safety-attempt records older than 35 days. They are not reset when a new installation identifier is issued or when the random account is deleted.</p>
 <h2>12. Changes and contact</h2>
-<p>Before publication, we will finalize this policy against the released app and provide its effective date, operator, contact address, deletion webpage, and outstanding provider/retention details. Material changes to processing must be reflected in the notice and policy before the changed processing begins.</p>
-<p>For the internal evidence behind this draft, see the code-based inventory, release gaps, and official sources, checked on 2026-10-25. These internal links and draft instructions must be replaced or removed when publishing the public policy.</p>
+<p>We may update this policy. The new effective date will appear at the top of this page. If processing changes in an important way, this policy will be updated before that processing begins. The operator is Qayvi LLC. Contact email: <span class="placeholder">[contact email]</span>.</p>
 </article>
 </main>
-<footer class="site-footer">This is a static page. It uses no scripts and no analytics.<br>联系邮箱：[联系邮箱待提供]</footer>
+<footer class="site-footer">This is a static page. It uses no scripts and no analytics.<br>Contact email: <span class="placeholder">[contact email]</span></footer>
 </body>
 </html>

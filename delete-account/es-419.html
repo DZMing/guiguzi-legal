@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eliminación de cuenta y datos (Guiguzi)</title>
+<title>Eliminación de cuenta y datos (口袋里的鬼谷子)</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -19,60 +19,64 @@
 <nav class="langs">Idiomas：<a href="zh-Hans.html">简体中文</a><a href="zh-Hant.html">繁體中文</a><a href="en.html">English</a><a href="es-419.html" aria-current="page">Español (Latinoamérica)</a></nav>
 <article>
 <h1>Eliminación de cuenta y datos</h1>
-
-<p>Esta página explica cómo Guiguzi trata la eliminación de cuenta y datos: cómo eliminar tu cuenta en la app, qué datos se borran y qué datos se conservan y durante cuánto tiempo. Se basa en el borrador de la Política de Privacidad de Guiguzi (2026-10-25). Los puntos marcados como 待补 (pendientes de completar) aún no están terminados y deben completarse antes del lanzamiento.</p>
+<blockquote>
+<p>Borrador. Los textos entre corchetes (correo de contacto, plazos de conservación, plazo de procesamiento de la eliminación y los datos para encontrar la cuenta) siguen sin completarse.</p>
+</blockquote>
+<p><strong>Operador:</strong> Qayvi LLC</p>
+<p><strong>Aplicación:</strong> 口袋里的鬼谷子 (paquete de Android com.guiguzi.app)</p>
+<p>Esta página explica cómo eliminar tu cuenta aleatoria de Guiguzi en la app, qué datos se borran y qué datos se conservan y durante cuánto tiempo. La política de privacidad está en la <a href="../privacy/es-419.html">Política de Privacidad en español</a>.</p>
 
 <h2>Eliminar tu cuenta en la app</h2>
 <ol>
 <li>Abre Guiguzi y toca Menú en la esquina superior derecha de la pantalla de inicio.</li>
-<li>Elige Guardados (el texto de la app también lo llama entrada de ajustes).</li>
+<li>Elige Guardados (el texto de la app también llama a esto entrada de ajustes).</li>
 <li>Toca Eliminar cuenta al final de la página.</li>
 <li>Toca Continuar.</li>
 <li>Toca Eliminar permanentemente para confirmar por segunda vez.</li>
 </ol>
-<p>La eliminación borra de inmediato la información de inicio de sesión y todo el contenido guardado en este teléfono, y destruye las claves que los desbloquean. El registro de la cuenta en el servidor se elimina después. Si no hay red, la solicitud se pone en cola y se envía automáticamente la próxima vez que abras la app con conexión. La eliminación no se puede deshacer.</p>
+<p>La eliminación borra de inmediato los datos locales de esa cuenta aleatoria y todo el contenido guardado en este teléfono, y destruye las claves que los desbloquean. El registro de la cuenta aleatoria en el servidor se elimina después. Si no hay red, la solicitud queda en cola y se envía automáticamente la próxima vez que abras la app con conexión. La eliminación no se puede deshacer.</p>
 
-<h2>Datos que se eliminan con tu cuenta</h2>
+<h2>Datos que se eliminan con la cuenta</h2>
 <ul>
-<li>La información de inicio de sesión y las credenciales de sesión en este teléfono;</li>
+<li>El identificador de la cuenta aleatoria y las credenciales de sesión en este teléfono;</li>
 <li>Todos los análisis guardados en este dispositivo y las claves que los desbloquean;</li>
 <li>El estado local del chat y la caché de importación (la limpieza puede fallar y dejar copias temporales; la app lo reintenta en el próximo inicio);</li>
-<li>El registro de la cuenta en el servidor, junto con la sesión actual de esa cuenta, los registros de uso y los resúmenes de solicitudes (actualmente en memoria; se borran al eliminar la cuenta o al reiniciar el servidor);</li>
-<li>Cuando el servidor confirma la eliminación, se eliminan las credenciales locales de eliminación.</li>
+<li>El registro de la cuenta en el servidor, junto con la sesión actual de esa cuenta, los registros de uso y los resúmenes de solicitudes (hoy están en memoria; se borran al eliminar la cuenta o al reiniciar el servidor);</li>
+<li>Cuando el servidor confirma la eliminación, se quitan las credenciales locales de eliminación.</li>
 </ul>
 
-<h2>Datos que se conservan tras eliminar la cuenta y sus plazos</h2>
+<h2>Datos que se conservan después de eliminar la cuenta, y por cuánto tiempo</h2>
 <table>
 <thead>
 <tr><th>Datos</th><th>Conservación y notas</th></tr>
 </thead>
 <tbody>
-<tr><td>Análisis guardados (en este dispositivo)</td><td>Permanecen hasta que los elimines; eliminar la cuenta también los borra.</td></tr>
-<tr><td>Modelos de voz descargados</td><td>Permanecen hasta que los borres en su configuración o junto con los archivos de la app; borrar la cuenta normalmente no los elimina.</td></tr>
-<tr><td>Texto no guardado, capturas y copias de audio</td><td>Se usan durante el proceso actual; una falla de limpieza o un análisis inconcluso puede dejar datos temporales, sin un plazo garantizado de borrado inmediato.</td></tr>
-<tr><td>Sesiones, registros de uso y resúmenes de solicitudes (servidor)</td><td>El acceso de sesión vence por defecto a las 24 horas, pero los registros no vencen automáticamente; eliminar la cuenta o reiniciar el servidor borra los registros actuales en memoria. El plazo de producción sigue pendiente de definición (待补).</td></tr>
-<tr><td>Credenciales locales de eliminación y solicitudes pendientes</td><td>Se guardan cifradas hasta la confirmación y la limpieza local exitosa, sin vencimiento automático fijo. Para reintentar, la app debe volver a ejecutarse con conexión.</td></tr>
-<tr><td>Comprobante mínimo de consentimiento tras la eliminación</td><td>Resumen del token de sesión, versión del aviso, decisión, fecha de decisión y versión de la app; vence 365 días después de la última decisión de aceptación o rechazo, no después de eliminar la cuenta.</td></tr>
-<tr><td>Registro de confirmación de eliminación</td><td>Se conserva sin fecha de vencimiento; solo contiene el resumen de la credencial de eliminación, la fecha de la primera confirmación y el hecho de que se confirmó la eliminación — sin identificador de cuenta, resumen del token de sesión, vínculo con el dispositivo ni contenido.</td></tr>
-<tr><td>Registros del dispositivo y cupos diarios, si están habilitados</td><td>El uso gratuito y los intentos de seguridad del dispositivo sobreviven a la eliminación y no tienen vencimiento implementado; los registros diarios pagados se eliminan al completar la eliminación, pero las filas históricas no vencen por sí solas. El plazo exacto sigue pendiente (待补).</td></tr>
-<tr><td>Registros técnicos y de terceros</td><td>Los plazos de la app, el alojamiento, el sistema operativo, RevenueCat, las tiendas, el servidor de descargas y los proveedores del modelo aún deben confirmarse (待补). No se aplica una promesa universal de 365 días ni de eliminación inmediata.</td></tr>
-<tr><td>Suscripción y transacciones de la tienda</td><td>Eliminar tu cuenta no cancela una suscripción ni borra los registros de transacciones de Apple/Google; administra la renovación en los ajustes de suscripciones de la tienda.</td></tr>
+<tr><td>Análisis guardados (en este dispositivo)</td><td>Permanecen en el dispositivo hasta que eliminas ese registro. Eliminar la cuenta también los borra.</td></tr>
+<tr><td>Modelos de voz descargados</td><td>Permanecen hasta que los borras en su configuración o junto con los archivos de la app. Eliminar la cuenta normalmente no los borra.</td></tr>
+<tr><td>Texto no guardado, capturas y copias de audio</td><td>Solo se usan para la operación en curso. Un fallo de limpieza o un análisis sin terminar puede dejar datos temporales, sin un plazo garantizado de borrado inmediato.</td></tr>
+<tr><td>Sesiones, registros de uso y resúmenes de solicitudes (servidor)</td><td>La credencial de sesión deja de servir a las 24 horas de forma predeterminada. Estos registros se conservan durante <span class="placeholder">[plazo de conservación de sesiones y resúmenes de solicitudes]</span>. Eliminar la cuenta o reiniciar el servidor borra las copias que estén en memoria en ese momento.</td></tr>
+<tr><td>Credenciales locales de eliminación y solicitudes pendientes</td><td>Se guardan cifradas hasta la confirmación y la limpieza local correcta, sin un vencimiento automático fijo. Para reintentar, la app debe ejecutarse otra vez con conexión.</td></tr>
+<tr><td>Comprobante mínimo de consentimiento tras la eliminación</td><td>Resumen del token de sesión, versión del aviso, decisión, momento de la decisión y versión de la app. Vence 365 días después de la última decisión de aceptar o rechazar, no después de eliminar la cuenta.</td></tr>
+<tr><td>Registro de confirmación de la eliminación</td><td>Se conserva sin fecha de vencimiento. Solo contiene el resumen de la credencial de eliminación, el momento de la primera confirmación y el hecho de que la eliminación se confirmó. No contiene identificador de cuenta, resumen del token de sesión, vínculo con el dispositivo ni contenido.</td></tr>
+<tr><td>Registros del dispositivo y del cupo diario</td><td>Un barrido programado borra los registros de uso gratuito del dispositivo con más de 730 días y los registros de intentos de seguridad con más de 35 días. Pueden permanecer después de eliminar la cuenta aleatoria hasta que el barrido los borre. Esta versión no crea registros diarios de pago.</td></tr>
+<tr><td>Registros técnicos y de terceros</td><td>Los registros de la app, del alojamiento y del sistema operativo, y los que conservan Google Play, el servidor de descargas y el proveedor del modelo, se guardan durante <span class="placeholder">[plazo de conservación de registros y datos de terceros]</span>. Esta página no promete que esos registros se borren a los 365 días ni de inmediato.</td></tr>
+<tr><td>Google Play</td><td>Esta versión no incluye RevenueCat ni compras dentro de la app, y no crea una suscripción de Google Play. Eliminar la cuenta aleatoria no es un reembolso de Google Play. Esta versión se ofrece solo en Google Play.</td></tr>
 </tbody>
 </table>
 
 <h2>Solicitar la eliminación sin usar la app</h2>
-<p>Si no puedes usar el flujo dentro de la app, puedes solicitar la eliminación de tu cuenta y de los datos relacionados mediante el correo de contacto: [联系邮箱待提供] (待补: el buzón y un plazo de procesamiento verificable).</p>
-<p>Una solicitud por correo solo abarca los datos de la cuenta en nuestros servidores. Los análisis guardados que existen solo en tu teléfono no se pueden borrar por correo; bórralos en la app o elimina la app completa (en iPhone, «Desinstalar app» conserva los documentos y datos).</p>
+<p>Si no puedes usar el flujo de la app, escribe a <span class="placeholder">[correo de contacto]</span> para pedir que eliminemos tu cuenta aleatoria y los datos relacionados en nuestros servidores. Incluye <span class="placeholder">[datos necesarios para encontrar la cuenta]</span> en el mensaje. Si la solicitud permite localizar la cuenta, el plazo de procesamiento es <span class="placeholder">[plazo de procesamiento de la eliminación]</span>.</p>
+<p>Una solicitud por correo solo cubre los datos de la cuenta en nuestros servidores. Los análisis guardados que solo están en tu teléfono no se pueden borrar por correo. Bórralos en la app, o desinstala la app, lo que normalmente elimina sus archivos locales.</p>
 
 <h2>Otras notas</h2>
 <ul>
-<li>Retirar el consentimiento de análisis no equivale a eliminar la cuenta y no borra automáticamente el contenido guardado, los registros de cupo ni las transacciones de la tienda.</li>
-<li>Que el servidor no encuentre una cuenta no prueba que se hayan eliminado datos de terceros. Algunas fallas de limpieza de credenciales locales también requieren reintento.</li>
-<li>Si no hay red al eliminar, la app reenvía la solicitud en el próximo inicio o al volver al primer plano; no se completa con la app cerrada.</li>
+<li>Retirar el consentimiento del análisis no es lo mismo que eliminar la cuenta aleatoria, y no borra automáticamente el contenido guardado ni los registros de cupo. Esta versión no crea transacciones de la tienda.</li>
+<li>Que el servidor no encuentre la cuenta no prueba que se hayan borrado datos de terceros. Algunos fallos al limpiar credenciales locales también exigen un reintento.</li>
+<li>Si no hay red al eliminar, la app reenvía la solicitud en el próximo inicio o al volver al primer plano. No se completa mientras la app está cerrada.</li>
 </ul>
 
 </article>
 </main>
-<footer class="site-footer">Esta es una página estática. No usa scripts ni analítica.<br>联系邮箱：[联系邮箱待提供]</footer>
+<footer class="site-footer">Esta página es estática. No usa scripts ni analítica.<br>Correo de contacto: <span class="placeholder">[correo de contacto]</span></footer>
 </body>
 </html>
