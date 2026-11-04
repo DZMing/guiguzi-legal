@@ -20,7 +20,7 @@
 <article>
 <h1>Eliminación de cuenta y datos</h1>
 
-<p>Esta página explica cómo Guiguzi trata la eliminación de cuenta y datos: cómo eliminar tu cuenta en la app, qué datos se borran y qué datos se conservan y durante cuánto tiempo. Se basa en el borrador de la Política de Privacidad de Guiguzi (2026-10-25). Los puntos marcados como 待补 (pendientes de completar) aún no están terminados y deben completarse antes del lanzamiento.</p>
+<p>Esta página explica cómo Guiguzi trata la eliminación de cuenta y datos: cómo eliminar tu cuenta en la app, qué datos se borran y qué datos se conservan y durante cuánto tiempo. Coincide con la política de privacidad de 口袋里的鬼谷子 finalizada el 2026-11-04.</p>
 
 <h2>Eliminar tu cuenta en la app</h2>
 <ol>
@@ -50,29 +50,29 @@
 <tr><td>Análisis guardados (en este dispositivo)</td><td>Permanecen hasta que los elimines; eliminar la cuenta también los borra.</td></tr>
 <tr><td>Modelos de voz descargados</td><td>Permanecen hasta que los borres en su configuración o junto con los archivos de la app; borrar la cuenta normalmente no los elimina.</td></tr>
 <tr><td>Texto no guardado, capturas y copias de audio</td><td>Se usan durante el proceso actual; una falla de limpieza o un análisis inconcluso puede dejar datos temporales, sin un plazo garantizado de borrado inmediato.</td></tr>
-<tr><td>Sesiones, registros de uso y resúmenes de solicitudes (servidor)</td><td>El acceso de sesión vence por defecto a las 24 horas, pero los registros no vencen automáticamente; eliminar la cuenta o reiniciar el servidor borra los registros actuales en memoria. El plazo de producción sigue pendiente de definición (待补).</td></tr>
+<tr><td>Sesiones, registros de uso y resúmenes de solicitudes (servidor)</td><td>La credencial de sesión deja de funcionar a las 24 horas por defecto; los registros subyacentes se borran tras 30 días de inactividad de la cuenta, y de inmediato al confirmarse la eliminación.</td></tr>
 <tr><td>Credenciales locales de eliminación y solicitudes pendientes</td><td>Se guardan cifradas hasta la confirmación y la limpieza local exitosa, sin vencimiento automático fijo. Para reintentar, la app debe volver a ejecutarse con conexión.</td></tr>
 <tr><td>Comprobante mínimo de consentimiento tras la eliminación</td><td>Resumen del token de sesión, versión del aviso, decisión, fecha de decisión y versión de la app; vence 365 días después de la última decisión de aceptación o rechazo, no después de eliminar la cuenta.</td></tr>
 <tr><td>Registro de confirmación de eliminación</td><td>Se conserva sin fecha de vencimiento; solo contiene el resumen de la credencial de eliminación, la fecha de la primera confirmación y el hecho de que se confirmó la eliminación — sin identificador de cuenta, resumen del token de sesión, vínculo con el dispositivo ni contenido.</td></tr>
-<tr><td>Registros del dispositivo y cupos diarios, si están habilitados</td><td>El uso gratuito y los intentos de seguridad del dispositivo sobreviven a la eliminación y no tienen vencimiento implementado; los registros diarios pagados se eliminan al completar la eliminación, pero las filas históricas no vencen por sí solas. El plazo exacto sigue pendiente (待补).</td></tr>
-<tr><td>Registros técnicos y de terceros</td><td>Los plazos de la app, el alojamiento, el sistema operativo, RevenueCat, las tiendas, el servidor de descargas y los proveedores del modelo aún deben confirmarse (待补). No se aplica una promesa universal de 365 días ni de eliminación inmediata.</td></tr>
-<tr><td>Suscripción y transacciones de la tienda</td><td>Eliminar tu cuenta no cancela una suscripción ni borra los registros de transacciones de Apple/Google; administra la renovación en los ajustes de suscripciones de la tienda.</td></tr>
+<tr><td>Registros del dispositivo y cupos diarios</td><td>Los registros de uso gratuito del dispositivo se borran 730 días después de su último uso del servicio; los de intentos de seguridad, 35 días después del día UTC que cubren. Sobreviven a la eliminación de la cuenta hasta la limpieza programada. Esta versión no crea registros diarios de pago.</td></tr>
+<tr><td>Registros técnicos y de terceros</td><td>Nuestros propios registros de solicitudes se borran a los 30 días por defecto; los de la app, el sistema operativo, el alojamiento, Google Play, el servidor de descargas y el proveedor del modelo siguen las políticas de cada proveedor.</td></tr>
+<tr><td>Transacciones de la tienda</td><td>Esta versión no incluye compras dentro de la app ni suscripciones; borrar la cuenta no reembolsa ninguna transacción de Google Play.</td></tr>
 </tbody>
 </table>
 
 <h2>Solicitar la eliminación sin usar la app</h2>
-<p>Si no puedes usar el flujo dentro de la app, puedes solicitar la eliminación de tu cuenta y de los datos relacionados mediante el correo de contacto: [联系邮箱待提供] (待补: el buzón y un plazo de procesamiento verificable).</p>
-<p>Una solicitud por correo solo abarca los datos de la cuenta en nuestros servidores. Los análisis guardados que existen solo en tu teléfono no se pueden borrar por correo; bórralos en la app o elimina la app completa (en iPhone, «Desinstalar app» conserva los documentos y datos).</p>
+<p>Si no puedes usar el flujo dentro de la app, puedes solicitar la eliminación de tu cuenta y de los datos relacionados mediante el correo de contacto: <span class="placeholder">{{CONTACT_EMAIL}}</span>. Una solicitud que pueda vincularse a una cuenta se completa en un plazo de 30 días; si la cuenta no se encuentra, respondemos que no se encontró. Incluye el identificador aleatorio de cuenta que muestra la app; sin él no podemos vincular tu correo a una cuenta.</p>
+<p>Una solicitud por correo solo abarca los datos de la cuenta en nuestros servidores. Los análisis guardados que existen solo en tu teléfono no se pueden borrar por correo; bórralos en la app o elimina la app completa.</p>
 
 <h2>Otras notas</h2>
 <ul>
-<li>Retirar el consentimiento de análisis no equivale a eliminar la cuenta y no borra automáticamente el contenido guardado, los registros de cupo ni las transacciones de la tienda.</li>
+<li>Retirar el consentimiento de análisis no es lo mismo que borrar la cuenta, y no elimina automáticamente el contenido guardado ni los registros de cupo.</li>
 <li>Que el servidor no encuentre una cuenta no prueba que se hayan eliminado datos de terceros. Algunas fallas de limpieza de credenciales locales también requieren reintento.</li>
 <li>Si no hay red al eliminar, la app reenvía la solicitud en el próximo inicio o al volver al primer plano; no se completa con la app cerrada.</li>
 </ul>
 
 </article>
 </main>
-<footer class="site-footer">Esta es una página estática. No usa scripts ni analítica.<br>联系邮箱：[联系邮箱待提供]</footer>
+<footer class="site-footer">Esta es una página estática. No usa scripts ni analítica.<br>Correo de contacto: <span class="placeholder">{{CONTACT_EMAIL}}</span></footer>
 </body>
 </html>
